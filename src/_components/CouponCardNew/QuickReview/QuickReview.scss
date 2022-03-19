@@ -1,0 +1,37 @@
+@import "../../../assets/mixins";
+@import "../../../assets/variables";
+
+.QuickReview {
+  background: #FFF;
+  border: 1px solid #F2F4F5;
+  box-sizing: border-box;
+  border-radius: 30px;
+  width: 48px;
+  height: 48px;
+  padding: 11px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  right: 24px;
+  padding: 0.5rem;
+  bottom: 30px;
+  margin-top: 40px;
+  transition: 0.3s;
+  opacity: 0;
+  //   @media (max-width: ($grid-breakpoint-xxl)) {
+  //     top: 340px;
+  //     right: 55px;
+  //   }
+  //  @media (max-width: 1600px) {
+  //     top: 160px
+  //   }
+  .rtl-class & {
+    right: unset;
+    left: 24px;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+}

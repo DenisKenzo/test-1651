@@ -1,0 +1,114 @@
+@import "variables";
+@import "mixins";
+
+.react-tabs {
+  .react-tabs__tab-list {
+    display: flex;
+    align-items: center;
+    border: none;
+    position: relative;
+    margin: 0 0 $spacer-2 + $spacer-1;
+    // @include mq($q14){
+    //   flex-flow: initial !important;
+    // }
+
+    @media (max-width: $grid-breakpoint-lg) {
+      & {
+        flex-flow: row wrap;
+        margin: 0 0 $spacer-1;
+      }
+
+      &::after {
+        bottom: unset;
+        top: 64px;
+      }
+    }
+
+    @include mq($q2) {
+      flex-flow: row nowrap;
+      width: max-content;
+    }
+
+    &::after {
+      content: '';
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 2px;
+      position: absolute;
+      background: #F6F6F7;
+      z-index: 0;
+    }
+  }
+
+  .react-tabs__tab {
+    bottom: unset;
+    border: none;
+    border-bottom: 4px solid transparent;
+    color: #757679;
+    padding: 18px 0;
+    margin-right: 37px;
+    display: flex;
+    cursor: pointer;
+
+    //    @include mq($q428) {
+    //   white-space: nowrap;
+    //     padding: 18px 0px !important;
+    //     }
+    //  &-list {
+    //   @include mq($q14){
+    //     margin: 0 0 1.5rem;
+    //   }
+    // }
+    // &-list:after {
+    //   width: 1120px;
+    //   @include mq($q14){
+    //     width: 695px;
+    //   }
+    // }
+    img {
+      opacity: 0.8;
+
+      .ltr-class & {
+        margin-right: $spacer-1 + $spacer-2;
+      }
+
+      .rtl-class & {
+        margin-left: $spacer-1 + $spacer-2;
+      }
+    }
+
+    &:focus {
+      box-shadow: none;
+      border-color: $primary;
+      outline: none;
+
+      &::after {
+        content: none;
+      }
+    }
+  }
+
+  .react-tabs__tab--selected {
+    border-radius: 0;
+    border-color: $primary;
+    position: relative;
+    z-index: 1;
+    color: #FE5900;
+    font-family: Heebo;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 24px;
+
+    // @include mq($q428) {
+    //   white-space: nowrap;
+    //     padding: 18px 0px !important;
+    // }
+    img {
+      opacity: 1;
+    }
+  }
+
+  .react-tabs__tab-panel--selected {}
+}

@@ -1,0 +1,182 @@
+@import "../assets/mixins";
+@import "../assets/variables";
+
+.ModalLogin {
+  display: flex;
+
+  @include mq($q14) {
+    zoom: 70% !important;
+  }
+
+  @include mq($q1792) {
+    zoom: 80%;
+  }
+
+  @include mq($q6) {
+    zoom: 90%;
+  }
+
+  @include mq($q12) {
+    flex-direction: column;
+  }
+
+  &__Presentation {
+    background-color: $primary;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px 0 0 8px;
+    flex-basis: 60%;
+  }
+
+  &__Form {
+    display: flex;
+    flex-basis: 44%;
+    flex-direction: column;
+    padding: 50px 24px;
+
+    @include mq($q1792) {
+      flex-basis: 40%;
+    }
+
+    @include mq($q14) {
+      flex-basis: 100%;
+    }
+    // styling choose kind og loginIn
+    .block-type {
+      border: 1px solid #D9DEE0;
+      border-radius: 5px;
+      padding: $spacer-4 $spacer-2;
+      margin-top: 24px;
+
+      .text-1 {
+        color: #809097 !important;
+      }
+
+      .text-2 {
+        color: #415962 !important;
+        font-weight: 500;
+      }
+
+      .text-3 {
+        color: #01222E !important;
+        font-weight: 500;
+      }
+
+      img {
+        margin: 0 $spacer-3;
+        width: 32px;
+        height: 32px;
+      }
+
+      &.active {
+        background: #FFF7F2;
+        border: 1px solid $primary;
+        cursor: pointer;
+
+        img {
+          filter: invert(51%) sepia(53%) saturate(3911%) hue-rotate(-7deg) brightness(114%) contrast(5);
+        }
+      }
+
+      &:hover {
+        border: 1px solid $primary;
+        cursor: pointer;
+      }
+    }
+
+    &-SocialLink {
+      margin-top: 30px;
+      display: flex;
+      width: 100%;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+      @include mq($q6){
+
+      }
+
+      a {
+        flex-basis: 47%;
+        margin-bottom: 24px;
+
+        &:nth-child(3) {
+          flex-basis: 100%;
+        }
+
+        @include mq($q6) {
+          flex-basis: 100%;
+        }
+      }
+    }
+  }
+}
+
+.modal_forgot,
+.login_block {
+  .block {
+    padding: $spacer-8 $spacer-3;
+  }
+
+  .form {
+    margin: 0 !important;
+  }
+
+  .another_way {
+    padding-top: 3rem;
+    margin: 3rem 1rem 0;
+    border-top: 1px solid #F2F4F5;
+
+    span {
+      &:hover {
+        opacity: 0.7;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .img-success {
+    width: 104px;
+    height: 104px;
+    animation: bounceIn 2s;
+  }
+
+  @keyframes bounceIn {
+    0% {
+      transform: scale(0.1);
+      opacity: 0;
+    }
+
+    60% {
+      transform: scale(1.2);
+      opacity: 1;
+    }
+
+    100% {
+      transform: scale(1);
+    }
+  }
+
+  .show_pass {
+    position: absolute;
+    top: 48px;
+    right: 31px;
+    text-transform: initial;
+
+    &:hover {
+      opacity: 0.6;
+      cursor: pointer;
+    }
+
+    &.active {
+      img {
+        filter: invert(51%) sepia(53%) saturate(3911%) hue-rotate(-7deg) brightness(114%) contrast(5);
+      }
+    }
+  }
+}
+
+.rtl-class .show_pass {
+  right: unset;
+  left: 31px;
+}

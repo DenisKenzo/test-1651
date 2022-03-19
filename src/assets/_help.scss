@@ -1,0 +1,88 @@
+.help_page {
+  @media (max-width: ($grid-breakpoint-sm)) {
+    max-width: 375px;
+  }
+
+  .card {
+    background: #FFF !important;
+    border: 1px solid #D9DEE0 !important;
+    margin-bottom: 1rem !important;
+    border-radius: 5px !important;
+
+    //&:has(.collapse.show) {
+    //
+    //}
+    .card-header {
+      background: #FFF !important;
+      border: unset !important;
+      padding: 0;
+
+      button {
+        text-align: initial;
+        padding: $spacer-3;
+        width: 100%;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+
+        p {
+          font-weight: 500;
+        }
+
+        &::before {
+          content: "";
+          background-image: url('./images/plus.svg');
+          width: 24px;
+          height: 24px;
+          margin-right: 1rem;
+          min-width: 24px;
+        }
+
+        .rtl-class &::before {
+          margin-right: unset;
+          margin-left: 1rem;
+        }
+      }
+    }
+
+    .card-body {
+      padding: 1rem;
+    }
+
+    &.active {
+      .card-header {
+        p {
+          color: $primary !important;
+        }
+
+        button {
+          &::before {
+            content: "";
+            background-image: url('./images/minus.svg');
+            width: 24px;
+            height: 24px;
+          }
+        }
+      }
+
+      border: 1px solid $primary !important;
+      box-sizing: border-box;
+      box-shadow: 0 4px 16px rgba(254, 89, 0, 0.16);
+    }
+
+    &:hover {
+      border: 1px solid $primary !important;
+      box-sizing: border-box;
+      box-shadow: 0 4px 16px rgba(254, 89, 0, 0.16);
+
+      button {
+        &::before {
+          content: "";
+          background-image: url('./images/Plus-orange.svg');
+          width: 24px;
+          height: 24px;
+        }
+      }
+    }
+  }
+}

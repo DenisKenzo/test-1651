@@ -1,0 +1,460 @@
+@import "variables";
+@import "mixins";
+
+.GalleryCarousel {
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+
+  @include mq($q8) {
+    display: initial;
+  }
+
+  .Slide-Main {
+    position: relative;
+
+    @include mq($q8) {
+      //width: initial !important;
+    }
+
+    .Heart {
+      bottom: 24px;
+
+      // @include mq($q2) {
+      //   right: 40px;
+      // }
+      .RTL & {
+        right: unset;
+        left: 24px;
+
+        @include mq($q2) {
+          left: 40px;
+        }
+      }
+
+      &::after {
+        height: 48px;
+        border-top-left-radius: unset;
+        border-top-right-radius: unset;
+        border-bottom: 1px solid #F2F4F5;
+        border-radius: 50%;
+      }
+    }
+  }
+
+  &.GalleryCarousel-Vertical {
+    flex-direction: column;
+
+    .GalleryCarousel-Main {
+      width: 352px !important;
+      height: 352px !important;
+      width: 100%;
+      padding: 0;
+      margin-bottom: 16px;
+    }
+
+    .GalleryCarousel-Thumbs {
+      max-height: 72px;
+      width: 100%;
+      max-width: 352px;
+
+      .slick-list {
+        margin-left: -31px;
+
+        .RTL & {
+          margin-right: -31px;
+          margin-left: unset;
+        }
+
+        @include mq($q14) {
+          height: 400px;
+        }
+      }
+
+      .slick-slide {
+        width: 72px;
+
+        //margin-right: 16px;
+        & > div {
+          margin: 0 32px;
+        }
+
+        .RTL & {
+          display: flex;
+          justify-content: flex-end;
+        }
+      }
+
+      .slide-sm {
+        min-height: unset;
+        max-height: 72px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 62px;
+        height: 72px;
+
+        //margin-right: 16px;
+        @include mq($q14) {
+          padding: 0;
+          min-width: 75px;
+        }
+
+        img {
+          width: 56px;
+          height: 56px;
+        }
+      }
+
+      .slick-next {
+        height: 90px !important;
+        width: 80px !important;
+        transform: rotate(-90deg);
+        bottom: -9px;
+        right: -9px;
+
+        .RTL & {
+          transform: rotate(90deg);
+          right: unset;
+          left: -9px;
+        }
+      }
+    }
+  }
+
+  &-Main {
+    padding: 0 1rem;
+    width: 580px;
+
+    @include mq($q16) {
+      height: 475px;
+      width: 475px;
+    }
+
+    @include mq($q15) {
+      height: 380px;
+      width: 430px;
+    }
+
+    @include mq($q14) {
+      height: 420px;
+      width: 460px;
+    }
+
+    @include mq($q8) {
+      height: 320px;
+      padding: 0;
+    }
+
+    @include mq($q428) {
+      height: 320px;
+      width: auto;
+    }
+
+    .slick-prev {
+      display: none !important;
+    }
+
+    .slick-next {
+      display: none !important;
+    }
+
+    .slick-list {
+      margin: 0 -9px;
+
+      .slick-slide {
+        height: initial !important;
+
+        & > div {
+          margin: 0 9px;
+        }
+      }
+    }
+
+    .slide {
+      background-position: center;
+      border-radius: 10px;
+      border: 1px solid lightgrey;
+      max-width: 540px;
+      height: 540px;
+      overflow: hidden;
+
+      @include mq($q21) {
+        padding: 56px;
+      }
+
+      @include mq($q12) {
+        padding: initial;
+      }
+
+      .zoomSlide {
+        cursor: zoom-in;
+      }
+
+      @include mq($q14) {
+        width: 100%;
+        height: 100%;
+      }
+
+      @include mq($q8) {
+        width: auto;
+      }
+
+      @include mq($q2) {
+        width: 100%;
+      }
+
+      & > div {
+        position: relative;
+
+        @include mq($q14) {
+          margin: 0 9px;
+        }
+      }
+
+      img {
+        width: 428px;
+        height: 428px;
+        object-fit: contain;
+        border-radius: 10px;
+        margin: 56px;
+
+        @include mq($q16) {
+          height: 304px;
+          width: 304px;
+        }
+
+        @include mq($q15) {
+          max-height: 304px;
+          max-width: 304px;
+        }
+
+        @include mq($q14) {
+          padding: 0;
+          max-width: 100%;
+        }
+
+        @include mq($q8) {
+          max-height: 208px;
+          max-width: 208px;
+        }
+      }
+
+      //@media (min-width: $grid-breakpoint-lg){
+      //  max-width: 432px;
+      //  max-height: 416px;
+      //}
+      //
+      //@media (min-width: $grid-breakpoint-xl) {
+      //  max-width: 590px;
+      //  max-height: 540px;
+      //}
+    }
+  }
+
+  &-Thumbs {
+    max-width: 140px;
+    width: 140px;
+    max-height: 538px;
+    overflow: hidden;
+
+    @include mq($q16) {
+      max-height: 475px;
+    }
+
+    @include mq($q15) {
+      max-height: 380px;
+    }
+
+    @include mq($q14) {
+      max-width: 100%;
+      width: 100%;
+      max-height: 380px;
+    }
+
+    @include mq($q6) {
+      max-height: 370px;
+    }
+
+    @include mq($q5) {
+      max-height: 325px;
+    }
+
+    .slick-list {
+      height: 540px;
+
+      @include mq($q9) {
+        margin: 0 -9px;
+      }
+
+      .slick-track {
+        height: 2 !important;
+      }
+
+      .slick-slide {
+        height: initial !important;
+
+        & > div {
+          margin: 0 9px;
+        }
+      }
+
+      .slide-sm {
+        margin-bottom: 13px;
+        background-position: center;
+        border-radius: 10px;
+        border: 1px solid lightgrey;
+        padding: 10px;
+        width: 123px;
+        height: 123px;
+        min-height: 121px;
+
+        @include mq($q14) {
+          width: 100%;
+          height: 100%;
+        }
+
+        @include mq($q9) {
+          width: 99%;
+        }
+
+        @include mq($q6) {
+          width: 100%;
+        }
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+        }
+
+        &:hover {
+          opacity: 0.7;
+          cursor: pointer;
+        }
+      }
+    }
+
+    .slick-prev {
+      display: none !important;
+    }
+
+    .slick-next {
+      width: 100% !important;
+      top: unset !important;
+      bottom: -57px;
+      padding-bottom: 0;
+      right: 0;
+      display: flex !important;
+      justify-content: center;
+      background: linear-gradient(360deg, #FFF 0%, rgba(255, 255, 255, 0.92) 20%, rgba(255, 255, 255, 0) 50%);
+
+      @include mq($q20) {
+        top: 365px !important;
+      }
+
+      @include mq($q15) {
+        bottom: -51px;
+        top: 362px !important;
+      }
+
+      @include mq($q14) {
+        top: 382px !important;
+      }
+
+      @media (min-width: $grid-breakpoint-lg) {
+        height: 19% !important;
+      }
+
+      @media (min-width: $grid-breakpoint-xl) {
+        height: 15% !important;
+      }
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      &::before {
+        color: black !important;
+        content: "";
+        background-image: url('./images/arrow-down.svg');
+        position: inherit;
+        width: 32px;
+        height: 32px;
+        bottom: 7px;
+      }
+    }
+  }
+
+  .No-image {
+    .slide {
+      padding: 0;
+      width: 100%;
+
+      img {
+        border-radius: 10px;
+        object-fit: cover;
+      }
+    }
+
+    .Heart {
+      bottom: 24px;
+      right: 24px;
+
+      @include mq($q2) {
+        right: 40px;
+      }
+
+      .RTL & {
+        right: unset;
+        left: 24px;
+
+        @include mq($q2) {
+          left: 40px;
+        }
+      }
+    }
+  }
+
+  .slick-dots {
+    display: block;
+    margin-top: 1rem;
+    position: unset;
+    width: 100%;
+
+    .rtl-class & {
+      width: 100%;
+    }
+
+    .slick-active {
+      button {
+        &::before {
+          background-color: $base-orange;
+          color: #f95901 !important;
+          opacity: 1 !important;
+        }
+      }
+    }
+
+    li {
+      margin: 0 0 1.5rem;
+
+      button {
+        &::before {
+          position: absolute;
+          border-radius: 50%;
+          content: '';
+          text-align: center;
+          font-size: 0.5rem;
+          width: 8px;
+          height: 8px;
+          border: 2px solid $base-orange;
+          opacity: 1;
+          color: $primary-25;
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+        }
+      }
+    }
+  }
+}

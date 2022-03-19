@@ -1,0 +1,64 @@
+@import "variables";
+
+// HEBO FONT FAMILY
+@mixin arimo ($font-size: 16, $line-height: 16, $letter-spacing: normal) {
+  font-family: 'Heebo Black', sans-serif;
+  font-size: $font-size * 1px;
+  font-weight: normal;
+  line-height: $line-height * 1px;
+  @if ($line-height !=normal) {
+    line-height: $line-height * 1px;
+  }
+  @else {
+    line-height: $line-height;
+  }
+}
+
+//@mixin h ($font-size: 16, $line-height: 16, $letter-spacing: normal) {
+//  font-family: 'ProximaNova-Regular', sans-serif;
+//  font-size: $font-size * 1px;
+//  font-weight: normal;
+//  line-height: $line-height * 1px;
+//  @if ($line-height !=normal) {
+//    line-height: $line-height * 1px;
+//  }
+//  @else {
+//    line-height: $line-height;
+//  }
+//}
+
+// Queries settings
+@mixin mq($width) {
+  @media only screen and (max-width: $width * 1px) {
+    @content;
+  }
+}
+
+@mixin mqm($width) {
+  @media only screen and (min-width: $width * 1px) {
+    @content;
+  }
+}
+
+@mixin landscape ($min-width, $max-width) {
+  @media only screen and (min-width: $min-width * 1px) and (max-width: $max-width * 1px) and (orientation: landscape) {
+    @content;
+  }
+}
+
+@mixin container {
+  position: relative;
+  margin: 0 208px;
+
+  @include mq($q18) {
+    margin: 0 110px;
+  }
+
+  @include mq($q14) {
+    margin: 0 40px;
+  }
+
+  @include mq($q7) {
+    margin: 0 16px;
+  }
+}

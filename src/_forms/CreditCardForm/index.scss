@@ -1,0 +1,288 @@
+@import "../../assets/mixins";
+@import "../../assets/variables";
+
+.rowCreditCard {
+  display: flex;
+  flex-wrap: nowrap !important;
+
+  @include mq($q14) {
+    display: block;
+  }
+
+  @include mq($q834) {
+    display: block;
+  }
+
+  .firstRow {
+    display: flex;
+
+    @include mq($q14) {
+      display: flex;
+      flex-wrap: nowrap !important;
+    }
+
+    @include mq($q834) {
+      display: flex;
+      flex-wrap: unset !important;
+    }
+
+    @include mq($q428) {
+      display: flex;
+      flex-wrap: wrap !important;
+    }
+  }
+}
+
+.noWrapRow {
+  margin-right: -16px;
+  margin-left: -16px;
+}
+
+.inputCol {
+  padding-left: 16px;
+}
+
+.cardHolder {
+  width: 352px;
+
+  @include mq($q14) {
+    width: 377px;
+  }
+
+  @include mq($q834) {
+    width: 332px;
+  }
+
+  @include mq($q428) {
+    width: 343px;
+  }
+
+  @include mq($q2) {
+    width: 330px;
+  }
+
+  @include mq($q1) {
+    width: 295px;
+  }
+}
+
+.cardNumber {
+  width: 352px;
+
+  @include mq($q14) {
+    width: 377px;
+  }
+
+  @include mq($q834) {
+    width: 332px;
+    margin-left: 24px;
+  }
+
+  @include mq($q428) {
+    width: 343px;
+    margin-left: initial;
+  }
+
+  @include mq($q2) {
+    width: 330px;
+  }
+
+  @include mq($q1) {
+    width: 295px;
+  }
+}
+
+.rowUserDetails {
+  display: flex;
+
+  @include mq($q428) {
+    display: inherit;
+  }
+
+  .fullname {
+    width: 480px !important;
+
+    @include mq($q14) {
+      width: 375px !important;
+    }
+
+    @include mq($q834) {
+      width: 332px !important;
+    }
+
+    @include mq($q428) {
+      width: 343px !important;
+    }
+
+    @include mq($q2) {
+      width: 330px !important;
+    }
+
+    @include mq($q1) {
+      width: 295px !important;
+    }
+  }
+
+  .streetAddress {
+    width: 608px !important;
+    margin-left: 32px;
+
+    @include mq($q14) {
+      width: 375px !important;
+      margin-left: 32px;
+    }
+
+    @include mq($q834) {
+      width: 332px !important;
+    }
+
+    @include mq($q428) {
+      width: 343px !important;
+    }
+
+    @include mq($q2) {
+      width: 330px !important;
+    }
+
+    @include mq($q1) {
+      width: 295px !important;
+    }
+  }
+}
+
+.wrapperInput {
+  margin-left: 160px;
+  min-width: 224px;
+  display: flex;
+
+  @include mq($q14) {
+    margin-left: initial;
+    width: 243px;
+    padding-left: 16px;
+  }
+
+  @include mq($q428) {
+    margin-left: initial;
+    width: 362px;
+    padding-left: 16px;
+  }
+
+  @include mq($q2) {
+    width: 348px;
+  }
+
+  @include mq($q1) {
+    width: 313px !important;
+  }
+
+  .expireDate {
+    input {
+      width: 133%;
+    }
+  }
+
+  .cvvStyle {
+    input {
+      border-left: none;
+    }
+  }
+}
+
+.checkboxWrap {
+  .label-text {
+    text-transform: initial !important;
+    color: #415962;
+    font-weight: 400;
+    margin-left: -20px;
+  }
+}
+
+.sizeInputWrap {
+  padding-left: 16px;
+  display: flex;
+
+  @include mq($q428) {
+    display: inherit;
+  }
+
+  .sizeInput {
+    width: 352px !important;
+    height: 56px !important;
+    margin-right: 32px;
+
+    @include mq($q14) {
+      width: 239px !important;
+    }
+
+    @include mq($q834) {
+      width: 212px !important;
+    }
+
+    @include mq($q428) {
+      width: 343px !important;
+    }
+
+    @include mq($q2) {
+      width: 330px !important;
+    }
+
+    @include mq($q1) {
+      width: 295px !important;
+    }
+  }
+}
+
+.transactions-form {
+  .btnTransactionCancel {
+    border: 1px solid #FE5900 !important;
+    width: 168px !important;
+    height: 40px !important;
+    margin-right: 16px;
+    margin-top: 64px;
+
+    @include mq($q428) {
+      margin-top: 24px;
+      width: 343px !important;
+    }
+
+    @include mq($q2) {
+      margin-top: 24px;
+      width: 330px !important;
+    }
+
+    @include mq($q1) {
+      width: 295px !important;
+    }
+  }
+
+  .btnTransactionSubmit {
+    background-color: #E8580B !important;
+    border-color: #E8580B !important;
+    box-shadow: none !important;
+    color: white !important;
+    width: 168px !important;
+    height: 40px !important;
+    margin-top: 64px;
+
+    @include mq($q428) {
+      margin-top: 24px;
+      width: 343px !important;
+    }
+
+    @include mq($q2) {
+      margin-top: 24px;
+      width: 330px !important;
+    }
+
+    @include mq($q1) {
+      width: 295px !important;
+    }
+  }
+}
+
+.btnCardWrapper {
+  @include mq($q428) {
+    display: flex;
+    flex-direction: column;
+  }
+}

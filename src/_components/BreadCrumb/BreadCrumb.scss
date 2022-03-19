@@ -1,0 +1,55 @@
+@import "../../assets/mixins";
+@import "../../assets/variables";
+
+.mobile-breadcrumbs {
+  display: none;
+
+  @media (max-width: ($grid-breakpoint-smm)) {
+    display: flex;
+    position: relative;
+    white-space: normal;
+    width: 324px;
+    // left: -10px;
+    .rtl-class & {
+      // right: -21px;
+      position: relative;
+      // left: 25px;
+      white-space: normal;
+      width: 370px;
+    }
+  }
+
+  @media (max-width: ($grid-breakpoint-sm)) {
+    display: flex;
+    position: relative;
+    // left: -10px;
+    .rtl-class & {
+      // right: -21px;
+      left: unset;
+    }
+  }
+}
+
+.BreadCrumbs {
+  @include mq($q500) {
+    display: none;
+  }
+
+  &-Row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin: 40px 0 32px;
+
+    .rtl-class & {
+      display: flex;
+      align-items: flex-end;
+      flex-direction: column;
+    }
+  }
+
+  .rtl-class & {
+    direction: ltr;
+  }
+}

@@ -1,0 +1,126 @@
+@import "../../../../assets/mixins";
+@import "../../../../assets/variables";
+
+.gallery {
+  background-position: center;
+  border-radius: 10px;
+  border: 1px solid lightgrey;
+  padding: 56px;
+  max-width: 352px;
+  max-height: 352px;
+
+  & > div {
+    position: relative;
+
+    @include mq($q14) {
+      margin: 0 9px;
+    }
+  }
+
+  img {
+    width: 240px;
+    height: 240px;
+  }
+}
+
+.QuickReviewModal {
+  padding: 32px !important;
+
+  &-Row {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+    .RTL & {
+      flex-direction: row-reverse;
+    }
+
+    &__Info,
+    &__Content {
+      display: flex;
+      flex-direction: column;
+      flex-basis: 48%;
+      width: 100%;
+      justify-content: center;
+      margin-right: 32px;
+
+      .RTL & {
+        margin-left: 32px;
+        margin-right: unset;
+      }
+    }
+   
+    &__Info {
+      .RTL & {
+        align-items: flex-end;
+      }
+
+      &-Descriptions {
+        margin-top: 24px;
+        font-family: $font-button-family;
+        color: #415962;
+        font-size: 18px;
+        line-height: 24px;
+        // height: 96px;
+        overflow: hidden;
+
+        .RTL & {
+          direction: rtl;
+          text-align: right;
+        }
+      }
+
+      &-Company {
+        margin-bottom: 8px;
+
+        a {
+          font-family: $font-default-family;
+          font-weight: bold;
+        }
+      }
+
+      &-Discount,
+      &-Company {
+        display: flex;
+
+        .RTL & {
+          direction: rtl;
+        }
+
+        @include mq($q10) {
+          margin-top: 8px;
+        }
+
+        .Discount-Title {
+          text-transform: uppercase;
+          font-weight: bold;
+          font-size: 12px;
+          font-family: $font-default-family;
+          line-height: 24px;
+          color: #415962;
+        }
+
+        .Discount-Description {
+          color: #FE5900;
+          font-weight: bold;
+          font-size: 16px;
+          line-height: 24px;
+          letter-spacing: 0.2px ;
+          font-family: $font-button-family !important;
+        }
+      }
+
+      .Name {
+        font-size: 28px;
+        line-height: 32px;
+        font-weight: 500;
+        font-family: "Roboto", "Heebo";
+        margin-bottom: 32px;
+
+        .RTL & {
+          text-align: right;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,94 @@
+$spacer: 1rem !default;
+$spacers: () !default;
+// stylelint-disable-next-line scss/dollar-variable-default
+$spacers: map-merge((0: 0, 1: ($spacer * 0.25), 2: ($spacer * 0.5), 3: $spacer, 4: ($spacer * 1.5), 5: ($spacer * 2), 6: ($spacer * 2.5), 7: ($spacer * 3), 8: ($spacer * 3.5), 9: ($spacer * 4), 10: ($spacer * 4.5), 11: ($spacer * 5), 12: ($spacer * 0.75)), $spacers);
+$spacer-0: map-get($spacers, 0);
+$spacer-1: map-get($spacers, 1);
+$spacer-2: map-get($spacers, 2);
+$spacer-3: map-get($spacers, 3);
+$spacer-4: map-get($spacers, 4);
+$spacer-5: map-get($spacers, 5);
+$spacer-6: map-get($spacers, 6);
+$spacer-7: map-get($spacers, 7);
+$spacer-8: map-get($spacers, 8);
+$spacer-9: map-get($spacers, 9);
+$spacer-10: map-get($spacers, 10);
+$spacer-11: map-get($spacers, 11);
+$spacer-12: map-get($spacers, 12);
+$grid-breakpoints: (xs: 0, sm: 375px, smm: 500px, md: 768px, lg: 1280px, xl: 1920px, xxl: 3000px) !default;
+$grid-breakpoint-xs: map_get($grid-breakpoints, "xs");
+$grid-breakpoint-sm: map_get($grid-breakpoints, "sm");
+$grid-breakpoint-smm: map_get($grid-breakpoints, "smm");
+$grid-breakpoint-md: map_get($grid-breakpoints, "md");
+$grid-breakpoint-lg: map_get($grid-breakpoints, "lg");
+$grid-breakpoint-xl: map_get($grid-breakpoints, "xl");
+$grid-breakpoint-xxl: map_get($grid-breakpoints, "xxl");
+$container-max-widths: (xs: 0, sm: 375px, smm: 500px, md: 720px, lg: 1152px, xl: 1536px) !default;
+$grid-columns: 12 !default;
+$grid-gutter-width: 32px !default;
+
+$primary: #FE5900 !default;
+$primary-75: #FE8442;
+$primary-50: #FFAC80;
+$primary-25: #FFD5BF;
+$primary-5: #FFF7F2;
+$secondary: #23AE15;
+$secondary-75: #5AC250;
+$secondary-50: #91D78A;
+$secondary-25: #C8EBC5;
+$secondary-5: #F4FBF3;
+$dark: #01222E;
+$dark-75: #415962;
+$dark-50: #809097;
+$dark-25: #BFC8CB;
+$dark-5: #D9DEE0;
+$black-5: #F2F4F5;
+$font-default-family: 'Roboto',
+  'Heebo';
+$font-button-family: 'Roboto',
+  'Arimo';
+
+$base-black: #01222E;
+$base-white: #FFF;
+$base-orange: #FE5900;
+
+// MEDIA QUERIES
+$q1: 320;
+$q2: 360;
+$q3: 375;
+$q390: 390;
+$q393: 393;
+$q4: 414;
+$q5: 425;
+$q428: 428;
+$q500: 500;
+$q6: 480;
+$q7: 568;
+$q8: 640;
+$q9: 679;
+$q10: 768;
+$q800: 800;
+$q820: 820;
+$q834: 834;
+$q884: 884;
+$q991: 991;
+$q1792: 1792;
+$q11: 992;
+$q12: 1024;
+$q13: 1180;
+$q14: 1280;
+$q15: 1367;
+$q16: 1440;
+$q17: 1537;
+$q18: 1600;
+$q19: 1700;
+$q1800: 1800;
+$q20: 1920;
+$q21: 1921;
+$q2100: 2300;
+
+$q390: 390;
+$q393: 393;
+$q428: 428;
+
+$q1279: 1279;

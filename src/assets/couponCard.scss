@@ -1,0 +1,654 @@
+@import "variables";
+@import "mixins";
+
+.nearByClass {
+  @media (max-width: ($grid-breakpoint-sm)) {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+}
+
+.ExtraCouponCard {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  flex-basis: 48%;
+  box-shadow: 0 12px 40px rgba(254, 89, 0, 0.08);
+  background-color: $base-white;
+  position: relative;
+  margin-top: 32px;
+
+  @media (max-width: ($grid-breakpoint-sm)) {
+    width: 100%;
+  }
+
+  @include mq($q14) {
+    flex-basis: 50%;
+  }
+
+  @include mq($q11) {}
+
+  &:hover {
+    transition: 1s;
+
+    .QuickReview {
+      display: flex;
+      transition: 0.3s;
+      opacity: 1;
+
+      @include mq($q14) {
+        display: none;
+      }
+
+      @media (min-width: 970px) {
+        display: unset;
+      }
+    }
+  }
+
+  &-Item {
+    display: flex;
+    padding: 32px 168px;
+    border-bottom: 1px solid #F2F4F5;
+    position: relative;
+    height: 464px;
+    justify-content: center;
+    align-items: center;
+
+    @include mq($q20) {}
+
+    @include mq($q18) {
+      height: 280px;
+      padding: 32px 220px;
+    }
+
+    @include mq($q17) {
+      height: 280px;
+      padding: 32px 168px;
+    }
+
+    @include mq($q16) {
+      height: 280px;
+      padding: 32px 168px;
+    }
+
+    @include mq($q15) {
+      padding: 33px 61px;
+    }
+
+    @include mq($q11) {
+      padding: 64px 50px;
+    }
+
+    @include mq($q884) {
+      padding: 64px 32px;
+    }
+
+    @include mq($q800) {
+      padding: 64px 22px;
+    }
+
+    @include mq($q10) {
+      padding: 64px 184px 25px;
+    }
+
+    @include mq($q428) {
+      padding: 64px 197px 25px;
+    }
+
+    @include mq($q4) {
+      padding: 64px 190px 25px;
+    }
+
+    @include mq($q390) {
+      padding: 64px 178px 25px;
+    }
+
+    @include mq($q3) {
+      padding: 64px 171px 25px;
+    }
+
+    @include mq($q2) {
+      padding: 64px 163px 25px;
+    }
+
+    @include mq($q1) {
+      padding: 64px 143px 25px;
+    }
+
+    .rtl-class & {
+      @include mq($q18) {
+        height: 280px;
+        padding: 32px 220px;
+      }
+
+      @include mq($q17) {
+        height: 280px;
+        padding: 32px 168px;
+      }
+
+      @include mq($q16) {
+        height: 280px;
+        padding: 32px 168px;
+      }
+
+      @include mq($q15) {
+        padding: 33px 61px;
+      }
+
+      @include mq($q11) {
+        padding: 64px 50px;
+      }
+
+      @include mq($q884) {
+        padding: 64px 32px;
+      }
+
+      @include mq($q800) {
+        padding: 64px 22px;
+      }
+
+      @include mq($q10) {
+        padding: 64px 184px 25px;
+      }
+
+      @include mq($q428) {
+        padding: 64px 196px 25px;
+      }
+
+      @include mq($q4) {
+        padding: 64px 190px 25px;
+      }
+
+      @include mq($q390) {
+        padding: 64px 178px 25px;
+      }
+
+      @include mq($q3) {
+        padding: 64px 170px 25px;
+      }
+
+      @include mq($q2) {
+        padding: 64px 163px 25px;
+      }
+
+      @include mq($q1) {
+        padding: 64px 143px 25px;
+      }
+    }
+
+    &.No-Image {
+      padding: 0;
+
+      .Product {
+        width: 100%;
+        object-fit: cover;
+        height: 100%;
+      }
+    }
+
+    .Product {
+      width: 400px;
+      height: 400px;
+      object-fit: contain;
+
+      @include mq($q18) {
+        width: 200px;
+        height: 200px;
+      }
+
+      @include mq($q17) {
+        width: 320px;
+      }
+
+      @include mq($q9) {
+        width: 100%;
+        //height: auto;
+      }
+
+      @include mq($q8) {
+        width: 180px;
+        height: 180px;
+      }
+    }
+  }
+
+  .Chip_me {
+    display: flex;
+    // margin-right: $spacer-4;
+    .rtl-class & {
+      margin-left: $spacer-4;
+      margin-right: unset;
+    }
+  }
+
+  .Realized {
+    // margin-left: 30px;
+    white-space: nowrap;
+  }
+}
+
+.CouponCard {
+  margin-top: 32px;
+  height: max-content;
+  width: 352px;
+  background: $base-white;
+  border: 1px solid #F2F4F5;
+  box-sizing: border-box;
+  border-radius: 5px;
+  transition: transform 0.5s;
+  display: flex;
+  flex-direction: column;
+
+  @include mq($q7) {
+    height: unset;
+  }
+
+  @include mq($q428) {
+    width: 100%;
+  }
+
+  @include mq($q2) {
+    width: 100%;
+  }
+
+  @include mq($q1) {
+    width: 100%;
+  }
+
+  &:hover {
+    transition: 1s;
+
+    .QuickReview {
+      display: flex;
+      top: 110px;
+      opacity: 1;
+      visibility: visible;
+
+      @include mq($q14) {
+        display: flex;
+      }
+
+      @include mq($q13) {
+        display: none;
+      }
+    }
+  }
+
+  &-Item {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    height: 230px;
+    border-bottom: 1px solid #F2F4F5;
+    padding: 50px 106px 25px;
+
+    &.No-Image {
+      padding: 0;
+
+      .Product {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+  &:hover {
+    transform: translate(0, -8px);
+    box-shadow: 0 4px 18px rgba(105, 44, 0, 0.08);
+  }
+
+  @media (max-width: ($grid-breakpoint-md)-1) {
+    margin-top: $spacer-4;
+  }
+
+  a {
+    display: flex;
+    flex-flow: column;
+    height: 100%;
+
+    .text-block {
+      flex: 1;
+      height: 0;
+    }
+  }
+
+  .rtl-class & {
+    direction: rtl;
+  }
+}
+
+.slick-slide.no-img {
+  opacity: 1 !important;
+}
+
+// BASE STYLE FOR COUPONS INFORMATION
+.CouponCard-Information,
+.ExtraCouponCard-Information {
+  display: flex;
+  align-content: center;
+  justify-content: space-between;
+  padding: 24px;
+
+  // @include mq($q9) {
+  //   padding: 16px;
+  // }
+  &__Row {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    .CouponCard-Name {
+      font-family: $font-default-family;
+      font-size: 24px;
+      line-height: 16px;
+      font-weight: bold;
+      color: $base-black;
+      direction: rtl;
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      margin-bottom: 0;
+
+      &__Title {
+        display: flex;
+        align-items: center;
+        text-align: right !important;
+        width: 335px;
+        overflow: hidden;
+        line-height: 1;
+        text-overflow: ellipsis;
+        display: flex;
+        -webkit-line-clamp: 3;
+        max-height: 70px;
+
+        @include mq ($q12) {
+          width: 230px;
+          max-height: 95px;
+        }
+
+        @include mq ($q1) {
+          width: 195px;
+          max-height: 155px;
+        }
+      }
+    }
+
+    .CouponCard-NameRU {
+      font-family: $font-default-family;
+      font-size: 1rem;
+      line-height: 16px;
+      font-weight: bold;
+      color: $base-black;
+      direction: rtl;
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      margin-bottom: 0;
+
+      &__Title {
+        display: flex;
+        align-items: center;
+        text-align: right !important;
+        width: 335px;
+        overflow: hidden;
+        line-height: 1;
+        text-overflow: ellipsis;
+        display: flex;
+        -webkit-line-clamp: 3;
+        max-height: 70px;
+
+        @include mq ($q12) {
+          width: 170px;
+          max-height: 95px;
+        }
+
+        @include mq ($q1) {
+          width: 120px;
+          max-height: 155px;
+        }
+      }
+    }
+
+    .CouponCard-NameEN {
+      font-family: $font-default-family;
+      font-size: 24px;
+      line-height: 16px;
+      margin-bottom: 12px;
+      font-weight: bold;
+      color: $base-black;
+      display: flex;
+      justify-content: space-between;
+
+      &__Title {
+        display: flex;
+        align-items: center;
+        width: 335px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: flex;
+        -webkit-line-clamp: 3;
+        max-height: 70px;
+        line-height: 1;
+
+        @include mq ($q12) {
+          width: 230px;
+        }
+
+        @include mq ($q1) {
+          width: 195px;
+          max-height: 65px;
+        }
+      }
+    }
+
+    .CouponCard-Discount {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      direction: rtl !important;
+
+      &__Redemption {
+        display: flex;
+        align-items: center;
+
+        @include mq($q1) {
+          display: inline-block;
+        }
+      }
+
+      &__Price {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+
+        & > div {
+          display: flex;
+          align-items: flex-end;
+        }
+
+        .Currency {
+          color: $base-black;
+          font-family: $font-default-family;
+          font-size: 18px;
+          line-height: 32px;
+          font-weight: bold;
+        }
+
+        .Price {
+          color: $base-black;
+          font-family: $font-default-family;
+          font-size: 40px;
+          line-height: 48px;
+          font-weight: bold;
+          margin-right: 3px;
+
+          @include mq($q9) {
+            font-size: 36px;
+            line-height: 44px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.CouponCard-Information {
+  padding: 16px;
+
+  .CouponCard-Name {
+    display: flex;
+    width: 100%;
+    font-size: 15px;
+    line-height: 16px;
+    justify-content: space-between;
+    margin-bottom: 0;
+    position: relative;
+
+    &__Title {
+      align-items: flex-start;
+      flex-direction: column;
+      text-align: right;
+      width: 335px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      line-height: 1;
+      display: flex;
+      -webkit-line-clamp: 3;
+      max-height: 48px;
+
+      @include mq ($q1) {
+        width: 192px;
+        max-height: 65px;
+      }
+
+      .Realized {
+        position: absolute;
+        bottom: 0;
+
+        .rtl-class & {
+          @include mq($q6) {
+            right: 0;
+          }
+        }
+      }
+    }
+
+    &__Price {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+
+      //margin-right: 66px;
+      @include mq($q9) {
+        margin-right: 54px;
+      }
+
+      @include mq($q7) {
+        margin-right: 0;
+      }
+
+      & > div {
+        display: flex;
+      }
+
+      .Currency {
+        color: $base-black;
+        font-family: $font-default-family;
+        font-size: 18px;
+        line-height: 32px;
+        font-weight: bold;
+      }
+
+      .Price {
+        color: $base-black;
+        font-family: $font-default-family;
+        font-size: 36px;
+        line-height: 40px;
+        font-weight: bold;
+        margin-right: 3px;
+      }
+    }
+
+    &__PriceEN {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      // margin-left: 66px;
+
+      @include mq($q9) {
+        // margin-left: 54px;
+      }
+
+      @include mq($q7) {
+        // margin-left: 40px;
+      }
+
+      & > div {
+        display: flex;
+      }
+
+      .Currency {
+        color: $base-black;
+        font-family: $font-default-family;
+        font-size: 18px;
+        line-height: 32px;
+        font-weight: bold;
+      }
+
+      .Price {
+        color: $base-black;
+        font-family: $font-default-family;
+        font-size: 36px;
+        line-height: 40px;
+        font-weight: bold;
+        margin-right: 3px;
+      }
+    }
+  }
+
+  .CouponCard-NameEN {
+    display: flex;
+    width: 100%;
+    font-size: 15px;
+    line-height: 16px;
+    justify-content: space-between;
+    margin-bottom: 0;
+    position: relative;
+
+    &__TitleEN {
+      align-items: flex-start;
+      flex-direction: column;
+      text-align: left;
+      width: 335px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      line-height: 1;
+      display: flex;
+      -webkit-line-clamp: 3;
+      max-height: 48px;
+
+      @include mq ($q1) {
+        width: 192px;
+        max-height: 65px;
+      }
+
+      .Realized {
+        position: absolute;
+        bottom: 0;
+      }
+    }
+  }
+}
+
+.Product {
+  width: 224px;
+  height: 180px;
+  object-fit: contain;
+
+  @include mq($q10) {
+    // bottom: 5px;
+    position: absolute;
+  }
+}

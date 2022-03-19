@@ -1,0 +1,82 @@
+.custom-select-field {
+  position: relative;
+  margin-top: 0.5rem;
+  border: 1px solid #d9dee0;
+  border-radius: 5px;
+
+  .field {
+    display: flex;
+    border: 1px solid #z;
+    box-sizing: border-box;
+    border-radius: 5px;
+    padding: 16px 24px;
+    cursor: pointer;
+  }
+
+  &.open .field {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  .display-p {
+    flex: 1;
+
+    p {
+      text-transform: initial;
+      color: #809097;
+    }
+  }
+
+  .button {
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    margin: -8px;
+    padding: 0 12px;
+    font-size: 20px;
+  }
+
+  &.open .button {
+    opacity: 0.6;
+    transform: rotate(180deg);
+    transition: 0.25s ease-in-out;
+  }
+
+  .button:hover {
+    opacity: 0.6;
+  }
+
+  .options {
+    background: white;
+    border: 1px solid #ccc;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    border-top: 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+    left: 0;
+    position: absolute;
+    padding: 8px 0;
+    right: 0;
+    top: 100%;
+    z-index: 3;
+  }
+
+  .option {
+    cursor: pointer;
+    padding: 8px 16px;
+    border-bottom: 1px solid whitesmoke;
+  }
+
+  .option:hover {
+    opacity: 0.6;
+  }
+
+  .overlay {
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 2;
+  }
+}

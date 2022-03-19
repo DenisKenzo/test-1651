@@ -1,0 +1,775 @@
+@import "../../../../assets/mixins";
+@import "../../../../assets/variables";
+
+.dateRangePickerWrapper {
+  border: 1px solid #D9DEE0;
+  box-sizing: border-box;
+  border-radius: 5px;
+  width: 262px;
+  padding: 15px;
+  height: 56px;
+  padding: 0 50px;
+
+  @include mq($q14) {
+    width: 243px;
+  }
+
+  @include mq($q428) {
+    width: 343px;
+  }
+}
+
+.daterangepicker {
+  right: 196px !important;
+
+  @include mq($q14) {
+    right: 131px !important;
+  }
+
+  @include mq($q834) {
+    right: 95px !important;
+  }
+
+  @include mq($q820) {
+    right: 80px !important;
+  }
+
+  @include mq($q800) {
+    right: 62px !important;
+  }
+
+  @include mq($q10) {
+    right: 30px !important;
+  }
+
+  @include mq($q428) {
+    width: 400px;
+    top: 100px !important;
+  }
+
+  @include mq($q4) {
+    right: 7px !important;
+  }
+
+  @include mq($q390) {
+    width: 378px;
+    right: 5px !important;
+  }
+
+  @include mq($q3) {
+    width: 365px;
+    right: 5px !important;
+  }
+
+  @include mq($q2) {
+    width: 345px;
+    right: 7px !important;
+  }
+
+  @include mq($q1) {
+    width: 305px;
+    right: 7px !important;
+  }
+}
+
+.img-calendar {
+  position: absolute;
+  padding: 17px;
+}
+
+.daterangepicker.show-calendar .drp-buttons {
+  clear: initial !important;
+
+  @include mq($q428) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.drp-buttons {
+  border-top: none !important;
+
+  .drp-selected {
+    display: none !important;
+  }
+
+  .cancelBtn {
+    color: #FE5900 !important;
+    border: 1px solid #FE5900;
+    box-sizing: border-box;
+    box-shadow: 0 4px 16px rgba(254, 89, 0, 0.08);
+    border-radius: 5px;
+    width: 80px;
+    height: 40px;
+    margin-right: 345px !important;
+
+    @include mq($q14) {
+      margin-right: 125px !important;
+    }
+
+    @include mq($q428) {
+      margin-right: initial !important;
+      width: 295px;
+      margin-bottom: 16px;
+    }
+  }
+
+  .applyBtn {
+    width: 80px;
+    height: 40px;
+
+    @include mq($q428) {
+      width: 295px;
+    }
+  }
+}
+
+.daterangepicker .ranges ul {
+  @include mq($q428) {
+    display: flex;
+  }
+}
+
+.daterangepicker .ranges li {
+  @include mq($q428) {
+    padding: 0 3px;
+  }
+
+  @include mq($q390) {
+    padding: 0;
+  }
+}
+
+.daterangepicker .ranges li.active {
+  background-color: #FE5900 !important;
+}
+
+.daterangepicker td.active,
+.daterangepicker td.active:hover {
+  background-color: #FE5900 !important;
+}
+
+.daterangepicker td.end-date:focus,
+.daterangepicker td.end-date:active,
+.daterangepicker td.end-date.active {
+  background-color: #FE5900 !important;
+}
+
+.daterangepicker td.start-date {
+  background-color: #FE5900 !important;
+}
+
+.daterangepicker td.end-date {
+  background-color: #FE5900 !important;
+}
+
+.daterangepicker td.in-range {
+  background-color: #FFF7F2 !important;
+}
+
+.daterangepicker.show-ranges.ltr .drp-calendar.left {
+  border-left: none !important;
+}
+
+.daterangepicker.show-calendar .ranges {
+  border: 1px solid #ddd !important;
+  margin: 16px;
+
+  @include mq($q428) {
+    margin: 5px;
+    margin-top: 40px;
+  }
+}
+
+.daterangepicker .calendar-table th,
+.daterangepicker .calendar-table td {
+  min-width: 37px !important;
+  height: 37px !important;
+}
+
+.daterangepicker.opensright::after {
+  right: 228px !important;
+  left: initial !important;
+
+  @include mq($q14) {
+    right: 15px !important;
+  }
+
+  @include mq($q428) {
+    display: none;
+  }
+}
+
+.daterangepicker.opensright::before {
+  right: 227px !important;
+  left: initial !important;
+
+  @include mq($q14) {
+    right: 14px !important;
+  }
+
+  @include mq($q428) {
+    display: none;
+  }
+}
+
+.daterangepicker .drp-calendar {
+  @include mq($q390) {
+    max-width: 253px;
+  }
+
+  @include mq($q2) {
+    max-width: 228px;
+  }
+
+  @include mq($q1) {
+    max-width: 197px;
+  }
+}
+
+.daterangepicker .drp-calendar.left {
+  .calendar-table {
+    @include mq($q14) {
+      width: 121%;
+    }
+
+    @include mq($q428) {
+      width: 143%;
+    }
+  }
+}
+
+.daterangepicker .drp-calendar.right {
+  @include mq($q14) {
+    .calendar-table {
+      .table-condensed {
+        thead {
+          tr {
+            th.month {
+              display: none !important;
+            }
+
+            th {
+              display: none !important;
+            }
+          }
+
+          span {
+          }
+        }
+      }
+
+      tbody {
+        display: none;
+      }
+    }
+  }
+}
+
+.daterangepicker .drp-calendar.right .calendar-table .table-condensed thead tr th.next {
+  display: table-cell !important;
+
+  @include mq($q428) {
+    position: absolute;
+    top: 100px;
+    right: 27px;
+  }
+}
+
+.daterangepicker .calendar-table .next span {
+  display: inline-block !important;
+
+  @include mq($q428) {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+  }
+}
+
+.inputWrap {
+  display: flex;
+  justify-content: space-between;
+
+  @include mq($q14) {
+    justify-content: initial;
+  }
+
+  @include mq($q428) {
+    flex-direction: column;
+  }
+}
+
+.input-search-transaction {
+  align-items: center;
+  position: relative;
+  height: 100%;
+  margin-left: 1.5px;
+  margin-right: 32px;
+
+  @include mq($q428) {
+    margin-left: initial;
+    margin-bottom: 16px;
+  }
+
+  @include mq($q2) {
+    margin-right: initial;
+  }
+
+  .rtl-class & {
+    margin-right: 1.5px;
+    margin-left: unset;
+  }
+
+  input {
+    background: #F6F6F7;
+    border-radius: 4px;
+    border: 0 white;
+    position: relative;
+    font-size: 15px;
+    line-height: 24px;
+    height: 100%;
+    width: 100%;
+    padding: 0.5rem 3.5rem 0.5rem 3rem;
+
+    .rtl-class & {
+      padding: 0.5rem 3.5rem 0.5rem 3rem;
+    }
+
+    &::placeholder {
+      color: #97989A;
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    //@media (min-width: $grid-breakpoint-lg) {
+    //  background: white;
+    //  color: black;
+    //
+    //  &::placeholder {
+    //    color: #AAAAAA;
+    //  }
+    //
+    //  width: 180px;
+    //}
+  }
+
+  &.white-transaction {
+    input {
+      background: #fff;
+      border: 1px solid #EEE;
+      border-radius: 4px;
+      height: 56px;
+      width: 825px;
+
+      @include mq($q14) {
+        width: 421px;
+      }
+
+      @include mq($q428) {
+        width: 343px;
+      }
+    }
+
+
+
+    .zoom-transaction {
+      background-color: transparent !important;
+    }
+  }
+
+  .rtl-class &::after {
+    left: 16px;
+    right: unset;
+  }
+
+  .zoom-transaction {
+    @media (min-width: $grid-breakpoint-lg) {
+      & {
+        content: "";
+        background-image: url('../../../../assets/images/search.svg');
+        position: absolute;
+        width: 24px;
+        height: 24px;
+        left: 16px;
+        top: 16px;
+      }
+    }
+
+    @media (min-width: $grid-breakpoint-xl) {
+      & {
+        content: "";
+        background-image: url('../../../../assets/images/search.svg');
+        position: absolute;
+        width: 24px;
+        height: 24px;
+        right: 16px;
+        background-color: #F6F6F7;
+      }
+    }
+
+    @media (min-width: $grid-breakpoint-sm) {
+      & {
+        content: "";
+        background-image: url('../../../../assets/images/search.svg');
+        position: absolute;
+        width: 24px;
+        height: 24px;
+        left: 16px;
+        top: 16px;
+      }
+    }
+
+    @include mq($q2) {
+      & {
+        content: "";
+        background-image: url('../../../../assets/images/search.svg');
+        position: absolute;
+        width: 24px;
+        height: 24px;
+        left: 16px;
+        top: 16px;
+      }
+    }
+
+    .rtl-class & {
+      left: 16px;
+      right: unset;
+    }
+
+    &:hover {
+      cursor: pointer;
+      opacity: 0.7;
+    }
+  }
+}
+
+.input-search-mobile-transaction {
+  display: none !important;
+
+  @media (max-width: ($grid-breakpoint-lg)-1) {
+    display: flex !important;
+  }
+
+  align-items: center;
+  margin: 1.5px;
+  position: relative;
+  border-radius: 30px;
+
+  input {
+    border-radius: 30px;
+    border: 1px solid grey;
+    height: 40px;
+    padding: 0.5px 1px;
+    position: relative;
+    background: white;
+    color: $primary-75;
+
+    &::placeholder {
+      color: $primary-75;
+      font-weight: bold;
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    @media (min-width: $grid-breakpoint-xl) {
+      width: 380px;
+    }
+  }
+
+  .rtl-class &::after {
+    left: 16px;
+    right: unset;
+  }
+
+  @media (max-width: ($grid-breakpoint-lg)-1) {
+    .zoom-transaction,
+    .arrow-transaction {
+      opacity: 0;
+      transition: opacity 0.6s;
+      z-index: 3;
+    }
+
+    .arrow-transaction {
+      content: "";
+      width: 16px;
+      height: 16px;
+      top: 8px;
+      background-repeat: no-repeat;
+      background-image: url('../../../../assets/images/arrow-search.svg');
+      position: absolute;
+      z-index: 3;
+      left: -9999px;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    input {
+      left: calc(100vw - 16px);
+      width: calc(100vw - 16px);
+      transition: left 0.3s ease, right 0.3s ease;
+      position: absolute;
+      height: 48px;
+      top: -7px;
+      border-radius: 5px;
+      padding-left: 48px;
+    }
+
+    & {
+      display: flex !important;
+      position: fixed;
+      order: -1;
+      left: 0;
+      right: 0;
+      z-index: 1;
+    }
+
+    &.mobile-open-transaction {
+      input {
+        left: -16px;
+        background-color: white;
+
+        &::placeholder {
+          color: #AAA;
+        }
+      }
+
+      .arrow-transaction {
+        left: 0;
+        opacity: 1;
+      }
+
+      .zoom-transaction {
+        content: "";
+        background-image: url('../../../../assets/images/search.svg');
+        position: absolute;
+        width: 24px;
+        height: 24px;
+        right: 0;
+        top: 3px;
+        opacity: 1;
+      }
+
+      .rtl-class & .zoom-transaction {
+        left: 0;
+        right: unset;
+      }
+
+      .rtl-class & {
+        input {
+          left: unset;
+          right: -16px;
+          padding-left: 16px;
+          padding-right: 48px;
+        }
+
+        .arrow-transaction {
+          transform: rotate(180deg);
+          left: unset;
+          right: 0;
+        }
+      }
+    }
+
+    .rtl-class & input {
+      left: unset;
+      right: calc(100vw - 16px);
+    }
+  }
+
+  .zoom-transaction {
+    & {
+      content: "";
+      background-image: url('../../../../assets/images/search.svg');
+      position: absolute;
+      width: 24px;
+      height: 24px;
+      right: 16px;
+    }
+
+    .rtl-class & {
+      left: 16px;
+      right: unset;
+    }
+
+    &:hover {
+      cursor: pointer;
+      opacity: 0.7;
+    }
+
+    &.show-transaction {
+      background-image: url('../../../../assets/images/search.svg');
+      z-index: 2;
+    }
+  }
+
+  &.show-transaction {
+    .search-overlay-transaction {
+      position: fixed;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      background: rgba(0, 15, 20, 0.6);
+      z-index: 1;
+    }
+
+    input {
+      z-index: 2;
+      background: white;
+      color: black;
+
+      &::placeholder {
+        color: #AAA;
+      }
+    }
+  }
+}
+
+.show-transaction {
+  .search-overlay-transaction {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: rgba(0, 15, 20, 0.6);
+    z-index: 1;
+  }
+}
+
+.no_transactions_wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 5rem;
+
+  .no_transactions {
+    font-family: Heebo !important;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 24px !important;
+    color: #01222E !important;
+  }
+
+  .transactions_message {
+    font-family: Heebo !important;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px !important;
+    color: #809097 !important;
+  }
+}
+
+.company-transactions {
+  font-family: Heebo !important;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px !important;
+
+  /* identical to box height, or 150% */
+
+  letter-spacing: 0.2px !important;
+
+  /* Color/Neutral/Black */
+
+  color: #01222E !important;
+}
+
+.purchase {
+  font-family: Heebo !important;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px !important;
+
+  /* identical to box height, or 171% */
+
+  letter-spacing: 0.2px !important;
+
+  /* Color/Neutral/Black 50% */
+
+  color: #809097 !important;
+}
+
+.currency-transactions {
+  color: $base-black;
+  font-family: $font-default-family;
+  font-size: 12px;
+  line-height: 32px;
+  font-weight: 500;
+}
+
+.amount {
+  font-family: Heebo !important;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 24px !important;
+
+  /* identical to box height, or 150% */
+
+  letter-spacing: 0.2px !important;
+  text-transform: uppercase;
+
+  /* Color/Neutral/Black */
+
+  color: #01222E !important;
+}
+
+.paymentMethod {
+  font-family: Heebo !important;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px !important;
+
+  /* identical to box height, or 150% */
+
+  letter-spacing: 0.2px !important;
+
+  /* Color/Neutral/Black */
+
+  color: #01222E !important;
+}
+
+.success-status {
+  font-family: Heebo !important;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 21px !important;
+
+  /* identical to box height */
+
+  text-align: center;
+  letter-spacing: 0.2px !important;
+  color: #FE5900 !important;
+}
+
+.canceled-status {
+  font-family: Heebo !important;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 21px !important;
+
+  /* identical to box height */
+
+  text-align: center;
+  letter-spacing: 0.2px !important;
+
+  /* Color/Neutral/Black 25% */
+
+  color: #BFC8CB !important;
+}

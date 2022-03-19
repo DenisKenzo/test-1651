@@ -1,0 +1,44 @@
+@import "../../assets/mixins";
+@import "../../assets/variables";
+
+.Nearby {
+  margin-left: 160px;
+
+  .rtl-range-input-slide {
+    .input-range__slider {
+      margin-top: -9px !important;
+    }
+  }
+
+  .rtl-range-input {
+    .input-range__track--active {
+      float: right;
+    }
+  }
+
+  @include mq($q14) {
+    margin-left: 0;
+    margin: 0 16px !important;
+  }
+
+  .rtl-class & {
+    margin-left: 0;
+    margin-right: 160px;
+
+    @include mq($q14) {
+      margin-right: 0;
+    }
+  }
+
+  &.NearFull {
+    margin-right: 160px;
+
+    .rtl-class & {
+      margin: 0 160px;
+
+      @include mq($q14) {
+        margin: 16px;
+      }
+    }
+  }
+}

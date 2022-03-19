@@ -1,0 +1,59 @@
+@import "../../../assets/mixins";
+@import "../../../assets/variables";
+
+.AdditionalCouponDetails {
+  display: flex;
+  margin-top: 80px;
+
+  @include mq($q12) {
+    margin-top: 56px;
+  }
+
+  .branch {
+    .rtl-class & {
+      margin-left: $spacer-2;
+    }
+
+    .ltr-class & {
+      margin-right: $spacer-2;
+    }
+  }
+
+  @media (min-width: $grid-breakpoint-sm) {
+    margin-top: $spacer-5;
+  }
+
+  @media (min-width: $grid-breakpoint-lg) {
+    margin-top: $spacer-11;
+  }
+
+  .text-branches {
+    color: $dark-75;
+  }
+
+  .tag-block {
+    flex: 1 1 8px;
+  }
+
+  h3 {
+    display: block;
+    position: relative;
+    width: fit-content;
+    padding-bottom: 3px;
+
+    &::after {
+      content: '';
+      border-radius: 4px;
+      width: 100%;
+      position: relative;
+      background-color: $base-orange;
+      height: 3px;
+      display: block;
+    }
+  }
+
+  .small-font {
+    direction: rtl;
+    text-align: right;
+  }
+}

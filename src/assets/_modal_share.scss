@@ -1,0 +1,87 @@
+@import "../assets/variables";
+@import "../assets/mixins";
+
+.ShareBlock {
+  margin-top: 40px;
+
+  &__List {
+    display: flex;
+
+    @include mq($q12) {
+      margin-top: 0;
+    }
+
+    a {
+      width: 40px;
+      height: 40px;
+      display: flex;
+      margin: 0 6px;
+
+      &:first-child {
+        @include mq($q9) {
+          margin: 0 8px 0 0;
+
+          .rtl-class & {
+            margin: 0 0 0 8px;
+          }
+        }
+      }
+
+      img {
+        @include mq($q12) {
+          width: 40px;
+          height: 40px;
+        }
+      }
+    }
+  }
+}
+
+.modal_share {
+  img {
+    @media (max-width: ($grid-breakpoint-md)-1) {
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  .copy-block {
+    input {
+      padding-right: 100px;
+      color: #809097 !important;
+      padding-left: 50px;
+
+      .rtl-class & {
+        padding-right: 50px;
+        padding-left: 100px;
+      }
+    }
+
+    //
+    //  span {
+    //    background-image: url('./images/link.svg');
+    //    width: 24px;
+    //    height: 24px;
+    //    bottom: 7px;
+    //    position: absolute;
+    //    top: 15px;
+    //    left: 15px;
+    //
+    //    .rtl-class & {
+    //      left: unset;
+    //      right: 15px;
+    //    }
+    //  }
+    //
+    //  button {
+    //    position: absolute;
+    //    top: 10px;
+    //    right: 10px;
+    //
+    //    .rtl-class & {
+    //      right: unset;
+    //      left: 10px;
+    //    }
+    //  }
+  }
+}

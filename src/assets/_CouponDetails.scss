@@ -1,0 +1,285 @@
+.rtl-class {
+  .Illustration-text {
+    text-align: right;
+  }
+}
+
+.couponDetails {
+  .slider-products {
+    width: 100%;
+
+    .slick-track {
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+    }
+
+    .slick-slide {
+      @include mq($q14) {
+        padding-left: 20px;
+      }
+
+      @include mq($q820) {
+        padding-left: 12px !important;
+      }
+
+      @include mq($q428) {
+        padding-left: 20px !important;
+      }
+
+      @include mq($q390) {
+        padding-left: 20px !important;
+      }
+
+      @include mq($q1) {
+        min-width: initial !important;
+      }
+    }
+
+    .slick-list {
+      height: 160px;
+
+      // overflow: unset !important;
+      @include mq($q14) {
+        overflow: unset !important;
+        margin-right: 413px !important;
+      }
+
+      @include mq($q834) {
+        margin-left: -47px !important;
+        margin-right: 25px !important;
+      }
+
+      @include mq($q820) {
+        margin-left: -38px !important;
+        margin-right: 10px !important;
+      }
+
+      @include mq($q800) {
+        margin-left: -42px !important;
+        margin-right: 5px !important;
+      }
+
+      @include mq($q10) {
+        margin-left: -42px !important;
+        margin-right: 5px !important;
+      }
+
+      @include mq($q428) {
+        margin-right: 10px !important;
+        margin-left: initial !important;
+      }
+
+      @include mq($q1) {
+        margin-right: 5px !important;
+        margin-left: initial !important;
+      }
+
+      // .rtl-class & {
+      // 	@include mq($q14) {
+      // 		margin-left: -45px;
+      // 		margin-right: 400px !important;
+      // 	}
+
+      // 	@include mq($q834) {
+
+      // 		margin-right: 359px !important;
+      // 		margin-left: -440px !important;
+      // 	}
+
+      // 	@include mq($q820) {
+
+      // 		margin-right: 340px !important;
+      // 		margin-left: -440px !important;
+      // 	}
+
+      // 	@include mq($q800) {
+
+      // 		margin-right: 325px !important;
+      // 		margin-left: -443px !important;
+      // 	}
+
+      // 	@include mq($q10) {
+      // 		margin-right: 333px !important;
+      // 		margin-left: -450px !important;
+      // 	}
+
+      // 	@include mq($q428) {
+      // 		margin-left: 30px !important;
+      // 		margin-right: -20px !important;
+      // 	}
+      // }
+    }
+
+    .slick-dots {
+      display: none;
+    }
+
+    .slick-prev {
+      display: block;
+      background: $primary !important;
+      border-radius: 43px;
+      transform: matrix(-1, 0, 0, 1, 0, 0);
+      left: -55px !important;
+      z-index: 1001 !important;
+      width: 48px !important;
+      height: 48px !important;
+      margin-top: -15px;
+
+      &::before {
+        background-image: url('./images/chevron-right.svg');
+        width: 24px;
+        height: 24px;
+        background-repeat: no-repeat;
+        font-size: 6px;
+        position: absolute;
+        left: 12px;
+        top: 11px;
+        content: "";
+      }
+
+      @include mq($q14) {
+        left: 0 !important;
+      }
+
+      .rtl-class & {
+        @include mq($q14) {
+          left: -50px !important;
+        }
+      }
+
+      @include mq($q12) {
+        display: none !important;
+      }
+    }
+
+    .slick-next {
+      display: block;
+      background: $primary !important;
+      border-radius: 43px;
+      transform: matrix(-1, 0, 0, 1, 0, 0);
+      right: -20px !important;
+      z-index: 1001 !important;
+      width: 48px !important;
+      height: 48px !important;
+      margin-top: -15px;
+      left: unset !important;
+
+      @include mq($q14) {
+        right: 30px !important;
+				
+      }
+
+      .rtl-class & {
+        @include mq($q14) {
+          right: 15px !important;
+        }
+      }
+
+      @include mq($q12) {
+        display: none !important;
+      }
+
+      &::before {
+        background-image: url('./images/chevron-left.svg');
+        width: 24px;
+        height: 24px;
+        background-repeat: no-repeat;
+        font-size: 6px;
+        position: absolute;
+        right: 12px;
+        top: 11px;
+        content: "";
+      }
+    }
+  }
+
+  .info-coupon {
+    text-align: initial;
+
+    .table-coupon-info {
+      margin-top: $spacer-6;
+
+      @media (min-width: $grid-breakpoint-sm) {
+        margin-top: $spacer-3;
+      }
+
+      @media (min-width: $grid-breakpoint-lg) {
+        margin-top: $spacer-6;
+      }
+    }
+
+    .table-coupon-info > div {
+      display: flex;
+      align-items: center;
+      background-color: $primary-5;
+      padding: $spacer-4;
+
+      @media (min-width: $grid-breakpoint-lg) {
+        padding: $spacer-3;
+      }
+
+      @media (min-width: $grid-breakpoint-sm) {
+        margin-top: $spacer-3;
+      }
+
+      .column-table {
+        div:first-child {
+          width: 100%;
+        }
+
+        @media (max-width: ($grid-breakpoint-lg)-1) {
+          display: flex;
+          align-items: center;
+          width: 100%;
+          justify-content: space-between;
+        }
+
+        div:last-child {
+          @media (max-width: ($grid-breakpoint-lg)-1) {
+            margin-top: 0 !important;
+            text-align: left;
+          }
+
+          width: 100%;
+        }
+
+        .rtl-class & {
+          margin-right: $spacer-3;
+        }
+
+        .ltr-class & {
+          margin-left: $spacer-3;
+        }
+      }
+    }
+
+    .text-coupon {
+      сolor: #01222E !important;
+
+      @media (min-width: $grid-breakpoint-sm) {
+        font-size: 16px !important;
+        line-height: 1.5rem !important;
+      }
+
+      @media (min-width: $grid-breakpoint-lg) {
+        font-size: 16px !important;
+        line-height: 1.5rem !important;
+      }
+
+      font-size: 22px !important;
+      line-height: 32px !important;
+      text-align: right;
+
+      .rtl-class & {
+        text-align: left;
+      }
+    }
+  }
+
+  .gallery-coupon {
+    @media (max-width: $grid-breakpoint-lg) {
+      order: -1;
+    }
+  }
+}

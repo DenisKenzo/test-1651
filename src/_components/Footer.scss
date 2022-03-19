@@ -1,0 +1,24 @@
+@import "../assets/mixins";
+@import "../assets/variables";
+
+.one-item-he {
+  .slick-list {
+
+    @include mq($q428) {
+      margin-right: -75px;
+    }
+
+    @include mq($q3) {
+      margin-right: -40px;
+    }
+  }
+}
+
+.one-item-en {
+  .slick-list {
+
+    @include mq($q3) {
+      margin-left: -27px;
+    }
+  }
+}

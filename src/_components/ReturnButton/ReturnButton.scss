@@ -1,0 +1,65 @@
+@import "../../assets/mixins";
+@import "../../assets/variables";
+
+// Return Button
+.ReturnButton {
+  margin-left: 16px;
+  margin-top: 32px;
+  display: inline-flex;
+
+  .rtl-class & {
+    margin-left: 0;
+    justify-content: flex-start;
+  }
+
+  a {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 23px;
+  }
+
+  @include mq($q14) {
+    margin-top: 24px;
+  }
+
+  @include mq($q12) {
+    margin-left: 0;
+  }
+
+  @media (max-width: ($grid-breakpoint-lg)-1) {
+    background: #FFF7F2;
+    border-radius: 30px;
+    padding: 0.5rem 1rem;
+  }
+
+  img {
+    .rtl-class & {
+      transform: rotate(180deg);
+    }
+  }
+
+  a {
+    .rtl-class & {
+      margin-right: $spacer-2;
+    }
+
+    .ltr-class & {
+      margin-left: $spacer-2;
+    }
+
+    &:hover {
+      color: $primary !important;
+    }
+  }
+
+  &:hover {
+    cursor: pointer;
+    opacity: 0.7;
+  }
+
+  // RTL CLASS BUTTON
+  .rtl-class & {
+    margin-left: unset;
+    margin-right: 16px;
+  }
+}

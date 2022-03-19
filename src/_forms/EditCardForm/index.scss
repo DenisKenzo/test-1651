@@ -1,0 +1,343 @@
+@import "../../assets/mixins";
+@import "../../assets/variables";
+
+.headerEdit {
+  min-width: 1120px;
+  height: 168px;
+  background-color: #FFF7F2 ;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 16px;
+  margin-top: 48px;
+  justify-content: space-between;
+  border-left: 4px solid #FE5900;
+
+  @include mq($q14) {
+    min-width: 790px;
+  }
+
+  @include mq($q834) {
+    min-width: 688px;
+  }
+
+  @include mq($q428) {
+    min-width: 343px;
+    flex-direction: column;
+  }
+
+  @include mq($q2) {
+    min-width: 330px;
+  }
+
+  @include mq($q1) {
+    min-width: 295px;
+  }
+
+  .toggler {
+    margin-left: 64px;
+  }
+}
+
+.editPaymentsDetails {
+  display: flex;
+  align-items: center;
+  position: relative;
+
+  .photoEdit {
+    margin-right: 40px;
+    margin-left: 23px;
+    width: 120px;
+    height: 120px;
+    position: relative;
+
+    @include mq($q428) {
+      width: 94px;
+      height: 94px;
+      margin-right: 16px;
+      margin-left: 20px;
+    }
+  }
+
+  .cardTitleEdit {
+    font-family: Heebo !important;
+    font-style: normal;
+    font-weight: 500 !important;
+    font-size: 18px !important;
+    line-height: 24px !important;
+    color: #01222E !important;
+    margin-bottom: 16px;
+  }
+
+  .ssssEdit {
+    position: relative;
+      
+    @include mq($q14) {
+      top: 16px;
+    }
+  }
+
+  .cardNumberEdit {
+    font-family: Heebo !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-size: 12px !important;
+    line-height: 16px !important;
+    color: #BFC8CB !important;
+    margin-left: initial !important;
+  }
+}
+//   hr {
+// width: 300px;
+//     bottom: 56px;
+//     position: absolute;
+//     margin-top: initial;
+//     margin-left: 24px;
+//     border: 1px solid #D9DEE0;
+//     margin-bottom: initial;
+//        @include mq($q14){
+//  margin-left: 14px;
+//     }
+//  @include mq($q3){
+ 
+//     }
+//   }
+.footerCardEdit {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  @include mq($q14){
+  }
+
+  .textEdit {
+    font-family: Heebo !important;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px !important;
+    white-space: nowrap;
+    line-height: 24px !important;
+    color: #D9DEE0;
+  }
+}
+
+.noWrapRow {
+  margin-right: -16px;
+  margin-left: -16px;
+}
+
+.inputCol {
+  padding-left: 16px;
+}
+
+.rowUserDetails {
+  display: flex;
+
+  @include mq($q428) {
+    display: inherit;
+  }
+
+  .fullname {
+    width: 480px !important;
+
+    @include mq($q14) {
+      width: 375px !important;
+    }
+
+    @include mq($q834) {
+      width: 332px !important;
+    }
+
+    @include mq($q428) {
+      width: 343px !important;
+    }
+
+    @include mq($q2) {
+      width: 330px !important;
+    }
+
+    @include mq($q1) {
+      width: 295px !important;
+    }
+  }
+
+  .streetAddress {
+    width: 608px !important;
+    margin-left: 32px;
+
+    @include mq($q14) {
+      width: 375px !important;
+      margin-left: 32px;
+    }
+
+    @include mq($q834) {
+      width: 332px !important;
+    }
+
+    @include mq($q428) {
+      width: 343px !important;
+    }
+
+    @include mq($q2) {
+      width: 330px !important;
+    }
+
+    @include mq($q1) {
+      width: 295px !important;
+    }
+  }
+}
+
+.wrapperInput {
+  margin-left: 160px;
+  min-width: 224px;
+  display: flex;
+
+  @include mq($q14) {
+    margin-left: initial;
+    width: 243px;
+    padding-left: 16px;
+  }
+
+  @include mq($q428) {
+    margin-left: initial;
+    width: 362px;
+    padding-left: 16px;
+  }
+
+  @include mq($q2) {
+    width: 348px;
+  }
+
+  @include mq($q1) {
+    width: 313px !important;
+  }
+
+  .expireDate {
+    input {
+      width: 133%;
+    }
+  }
+
+  .cvvStyle {
+    input {
+      border-left: none;
+    }
+  }
+}
+
+.checkboxWrap {
+  .label-text {
+    text-transform: initial !important;
+    color: #415962;
+    font-weight: 400;
+    margin-left: -20px;
+  }
+}
+
+.sizeInputWrap {
+  padding-left: 16px;
+  display: flex;
+
+  @include mq($q428) {
+    display: inherit;
+  }
+
+  .sizeInput {
+    width: 352px !important;
+    height: 56px !important;
+    margin-right: 32px;
+
+    @include mq($q14) {
+      width: 239px !important;
+    }
+
+    @include mq($q834) {
+      width: 212px !important;
+    }
+
+    @include mq($q428) {
+      width: 343px !important;
+    }
+
+    @include mq($q2) {
+      width: 330px !important;
+    }
+
+    @include mq($q1) {
+      width: 295px !important;
+    }
+  }
+}
+
+.btnTransactionRemove {
+  border: 1px solid #FE5900 !important;
+  width: 121px !important;
+  height: 40px !important;
+  margin: 0 !important;
+    
+  @include mq($q428) {
+    width: 343px !important;
+  }
+
+  @include mq($q2) {
+    width: 330px !important;
+  }
+
+  @include mq($q1) {
+    width: 295px !important;
+  }
+}
+  
+.btnTransactionCancel {
+  border: 1px solid #FE5900 !important;
+  width: 168px !important;
+  height: 40px !important;
+  margin-right: 16px;
+  margin-top: 64px;
+    
+  @include mq($q428) {
+    margin-top: 24px;
+    width: 343px !important;
+  }
+
+  @include mq($q2) {
+    margin-top: 24px;
+    width: 330px !important;
+  }
+
+  @include mq($q1) {
+    width: 295px !important;
+  }
+}
+
+.btnTransactionSubmit {
+  background-color: #E8580B !important;
+  border-color: #E8580B !important;
+  box-shadow: none !important;
+  color: white !important;
+  width: 168px !important;
+  height: 40px !important;
+  margin-top: 64px;
+
+  @include mq($q428) {
+    margin-top: 24px;
+    width: 343px !important;
+  }
+
+  @include mq($q2) {
+    margin-top: 24px;
+    width: 330px !important;
+  }
+
+  @include mq($q1) {
+    width: 295px !important;
+  }
+}
+
+.btnCardWrapper {
+  @include mq($q428) {
+    display: flex;
+    flex-direction: column;
+  }
+}

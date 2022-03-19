@@ -1,0 +1,266 @@
+@import '../../assets/mixins';
+@import '../../assets/variables';
+
+.CouponDetails {
+  margin: 0 208px;
+
+  // overflow-x: hidden;
+  @include mq($q14) {
+    overflow-x: hidden;
+  }
+
+  @include mq($q12) {
+    overflow-x: unset;
+  }
+
+  .rtl-class & {
+    text-align: right;
+  }
+
+  @include mq($q18) {
+    margin: 0 110px;
+  }
+
+  @include mq($q14) {
+    margin: 0 40px;
+  }
+
+  @include mq($q7) {
+    margin: 0 16px;
+    overflow-x: hidden;
+  }
+
+  &-Content {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 32px;
+
+    @include mq($q12) {
+      margin-bottom: 56px;
+      flex-direction: column-reverse;
+    }
+  }
+
+  &-Info,
+  &-Gallery_Coupon {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 48%;
+    //@include mq($q14) {
+    //  overflow-x: hidden;
+    //}
+  }
+
+  //Details Info Wrapper
+  &-Info {
+    display: flex;
+    flex-direction: column;
+
+    @include mq($q14) {
+      margin-top: 40px;
+    }
+
+    &__Descriptions {
+      margin-top: 24px;
+      font-family: $font-button-family;
+      color: #415962;
+      font-size: 22px;
+      line-height: 32px;
+    }
+
+    &__Limited {
+      display: flex;
+      margin-top: 40px;
+      border-radius: 5px;
+
+      @include mq($q12) {
+        flex-direction: column;
+      }
+
+      &-Item {
+        display: flex;
+        flex-basis: 33.33%;
+        padding: 16px;
+        align-items: center;
+        background: #FFF7F2;
+
+        @include mq($q12) {
+          margin-bottom: 16px;
+          padding: 24px 26px;
+        }
+
+        .rtl-class & {
+          &:first-child {
+            //margin-left: 0;
+            padding-left: 0;
+
+            @include mq($q12) {
+              padding-left: 26px;
+            }
+          }
+
+          &:nth-child(2) {
+            padding-left: 0;
+
+            @include mq($q12) {
+              padding-left: 26px;
+            }
+          }
+        }
+
+        .Limited-Item__Wrap {
+          @include mq($q12) {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+          }
+        }
+
+        img {
+          margin-right: 18px;
+          width: 20px;
+          height: 20px;
+          object-fit: cover;
+
+          .rtl-class & {
+            margin-right: 0;
+            margin-left: 14px;
+          }
+        }
+
+        .Title {
+          color: #01222E;
+          font-size: 18px;
+          line-height: 24px;
+          letter-spacing: 0.2px;
+
+          @include mq($q14) {
+            font-size: 16px;
+          }
+
+          .rtl-class & {
+            @include mq($q14) {
+              font-size: 16px;
+            }
+          }
+        }
+
+        .Desc {
+          color: #FE5900;
+          font-weight: bold;
+          font-size: 18px;
+          line-height: 24px;
+          letter-spacing: 0.2px;
+          margin: 8px 0;
+
+          @include mq($q14) {
+            margin: 0;
+            font-size: 16px;
+          }
+
+          .rtl-class & {
+            @include mq($q14) {
+              font-size: 16px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &-Gallery_Coupon {
+    .Illustration-Info {
+      padding: 8px 1.4rem;
+      display: block;
+      position: relative;
+
+      @include mq($q14) {
+        display: none;
+      }
+
+      .rtl-class & {
+        margin-left: 146px;
+        text-align: right;
+
+        @include mq($q14) {
+          margin-left: 0;
+          padding: 0;
+          margin-top: 4px;
+          margin-bottom: 16px !important;
+        }
+      }
+    }
+  }
+
+  //RTL CouponDetails
+  .rtl-class & {
+    //margin: 0 208px;
+    //@include mq($q16){
+    //  margin: 0 110px;
+    //}
+    //@include mq($q12) {
+    //  margin: 0 40px;
+    //}
+  }
+
+  // Return Button
+  &-ReturnButton {
+    margin-top: 32px;
+    display: inline-flex;
+    //width: 100%;
+    background: #FFF7F2;
+    border-radius: 30px;
+    padding: 0.5rem 1rem;
+
+    .rtl-class & {
+      //flex-direction: row-reverse;
+      margin-left: 0;
+      justify-content: flex-start;
+    }
+
+    a {
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 23px;
+    }
+
+    @include mq($q14) {
+      margin-top: 24px;
+    }
+
+    @include mq($q12) {
+      margin-left: 0;
+    }
+
+    img {
+      .rtl-class & {
+        transform: rotate(180deg);
+      }
+    }
+
+    a {
+      .rtl-class & {
+        margin-right: $spacer-2;
+      }
+
+      .ltr-class & {
+        margin-left: $spacer-2;
+      }
+
+      &:hover {
+        color: $primary !important;
+      }
+    }
+
+    &:hover {
+      cursor: pointer;
+      opacity: 0.7;
+    }
+
+    // RTL CLASS BUTTON
+    .rtl-class & {
+      margin-left: unset;
+    }
+  }
+}

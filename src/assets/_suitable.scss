@@ -1,0 +1,253 @@
+.wrapBtnTxt {
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.btnSize {
+  font-size: 15px;
+  line-height: 24px;
+}
+
+.categories-suitable {
+  .categories_block {
+    margin-right: -16px;
+
+    @include mq($q2100) {
+      margin-right: -10px;
+    }
+
+    .rtl-class & {
+      @include mq($q14) {
+        margin-right: -16px;
+      }
+
+      @include mq($q10) {
+        margin-right: 0;
+      }
+
+      @include mq($q428) {
+        margin-left: -10px;
+        margin-right: unset;
+      }
+    }
+
+    .categories_block_nowrap {
+      white-space: nowrap !important;
+      display: flex;
+
+      >div {
+        display: inline-block;
+        float: none;
+        width: 102%;
+        margin: 0 8px;
+
+        @include mq($q2100) {
+          width: 102%;
+        }
+
+        @include mq($q20) {
+          width: 102%;
+        }
+
+        @include mq($q14) {
+          width: 100%;
+          // width: 1215px;
+        }
+
+        @include mq($q12) {
+          width: 102%;
+        }
+
+        @include mq($q834) {
+          width: 775px;
+        }
+
+        @include mq($q820) {
+          width: 755px;
+        }
+
+        @include mq($q10) {
+          width: 710px;
+        }
+
+        @include mq($q428) {
+          width: 600px;
+        }
+
+        @include mq($q390) {
+          width: 523px;
+        }
+
+        @include mq($q3) {
+          width: 560px;
+        }
+
+        @include mq($q1) {
+          width: 500px;
+        }
+
+        .rtl-class & {
+          @include mq($q10) {
+            width: 755px;
+          }
+
+          @include mq($q428) {
+            width: 600px;
+          }
+
+          @include mq($q390) {
+            width: 523px;
+          }
+
+          @include mq($q3) {
+            width: 560px;
+          }
+
+          @include mq($q2) {
+            width: 530px;
+          }
+
+          @include mq($q1) {
+            width: 500px;
+          }
+        }
+
+        &:first-child {}
+
+        &:last-child {
+          padding-right: 8px;
+
+          @include mq($q20) {
+            padding-right: 8px;
+          }
+
+          @include mq($q17) {
+            padding-right: 200px;
+          }
+
+          @include mq($q16) {
+            padding-right: 8px;
+          }
+
+          @include mq($q428) {
+            padding-right: 75px;
+          }
+
+          @include mq($q390) {
+            padding-right: 0;
+          }
+
+          @include mq($q3) {
+            padding-right: 40px;
+          }
+
+          @include mq($q2) {
+            padding-right: 50px;
+          }
+
+          @include mq($q2) {
+            padding-right: 30px;
+          }
+        }
+
+        .rtl-class & {
+          &:first-child {
+            margin-right: 0;
+            margin-left: 8px;
+          }
+
+          &:last-child {
+            padding-left: 8px;
+            padding-right: initial;
+
+            @include mq($q2100) {
+              padding-left: 34px;
+              padding-right: initial;
+            }
+
+            @include mq($q20) {
+              padding-left: 8px;
+              padding-right: initial;
+            }
+
+            @include mq($q1800) {
+              // padding-left: 178px;
+              padding-right: initial;
+            }
+
+            @include mq($q17) {
+              padding-left: 190px;
+              padding-right: initial;
+            }
+
+            @include mq($q16) {
+              padding-left: 8px;
+              padding-right: initial;
+            }
+
+            @include mq($q428) {
+              padding-right: 75px;
+              padding-left: initial;
+            }
+
+            @include mq($q390) {
+              padding-right: 0;
+            }
+
+            @include mq($q3) {
+              padding-right: 40px;
+            }
+
+            @include mq($q2) {
+              padding-right: 0;
+            }
+
+            @include mq($q1) {
+              padding-right: 30px;
+            }
+          }
+        }
+
+        img {
+          width: 48px;
+          height: 48px;
+
+          @include mq($q12) {
+            width: 31px;
+            height: 31px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.mobileBread {
+  display: none;
+}
+
+.custom-margin {
+  margin-top: -24px;
+
+  @media (max-width: ($grid-breakpoint-md)) {
+    flex-direction: column;
+  }
+
+  @media (max-width: ($grid-breakpoint-sm)) {
+    margin-top: -16px;
+  }
+
+  .d-flex {
+    @media (max-width: ($grid-breakpoint-md)) {
+      width: 100%;
+
+      >div {
+        width: 100%;
+
+        button {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

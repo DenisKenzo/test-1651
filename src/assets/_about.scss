@@ -1,0 +1,47 @@
+.about {
+  h3 {
+    color: #415962 !important;
+
+    @media (min-width: ($grid-breakpoint-lg)) {
+      margin-top: $spacer-10;
+    }
+  }
+
+  .description {
+    text-align: initial;
+    font-family: Heebo;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.2px;
+    color: #415962;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .block_info {
+    font-family: $font-default-family;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 48px;
+    text-align: center;
+    letter-spacing: 0.2px;
+    color: $primary;
+    margin-top: $spacer-5;
+  }
+
+  .p-x-small {
+    color: #415962 !important;
+  }
+
+  .about_img {
+    width: 100%;
+
+    @media (max-width: ($grid-breakpoint-lg)-1) {
+      margin-top: $spacer-5;
+    }
+  }
+}

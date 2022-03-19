@@ -1,0 +1,193 @@
+@import "../../../assets/mixins";
+@import "../../../assets/variables";
+
+.Products {
+  align-items: center;
+  text-align: initial;
+
+  .tooltip-element-custom {
+    direction: rtl;
+  }
+
+  .slick-list {
+    overflow: initial;
+  }
+
+  .he-lang {
+    @media (max-width: 1000px) {
+      .slick-slide:last-child {
+        margin-right: -50px;
+      }
+    }
+  }
+
+  .product-text {
+    margin-left: $spacer-3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .rtl-class & {
+      margin-right: $spacer-3;
+
+      @include mq($q14) {
+        margin-right: $spacer-3;
+        margin-left: unset;
+      }
+    }
+
+    .width-prodname {
+      width: 228px;
+      direction: rtl;
+
+      @include mq($q428) {
+        width: 184px;
+      }
+
+      @include mq($q3) {
+        width: 187px;
+      }
+
+      @include mq($q2) {
+        width: 190px;
+      }
+
+      @include mq($q1) {
+        width: 165px;
+      }
+    }
+
+    .rtl-class & {
+      direction: rtl;
+    }
+
+    .text-number {
+      margin-right: 2rem;
+
+      @include mq($q428) {
+        margin-right: 2rem;
+      }
+
+      .rtl-class & {
+        margin-left: 2rem;
+        margin-right: initial;
+
+        @include mq($q428) {
+          margin-left: 2rem;
+          margin-right: initial;
+        }
+      }
+    }
+
+    .text-primary {
+      @include mq($q1) {
+        width: initial;
+      }
+
+      p {
+        font-size: 14px !important;
+
+        @include mq($q428) {
+          font-size: 12px !important;
+        }
+
+        @include mq($q390) {
+          font-size: 11px !important;
+        }
+
+        @include mq($q1) {
+          font-size: 8px !important;
+        }
+
+        .rtl-class & {
+          @include mq($q1) {
+            font-size: 10px !important;
+          }
+        }
+      }
+    }
+
+    // .rtl-class & {
+    //   margin-right: $spacer-3;
+
+    // }
+  }
+
+  @media (min-width: $grid-breakpoint-md) {
+    margin-left: 0;
+
+    .rtl-class & {
+      margin-left: 0;
+    }
+  }
+
+  @include mq($q14) {
+    .rtl-class & {
+      margin-left: 4rem;
+    }
+  }
+
+  @include mq($q834) {
+    .rtl-class & {
+      margin-left: 5rem;
+    }
+  }
+
+  @include mq($q428) {
+    .rtl-class & {
+      margin-left: 0;
+    }
+  }
+
+  @media (min-width: $grid-breakpoint-xl) {
+    margin-left: 0;
+  }
+
+  @media (max-width: 428px) {
+    transform: translateX(-20px);
+  }
+
+  .prodWrap {
+    width: 95% !important;
+
+    .product-block {
+      height: 115px;
+      width: inherit;
+      padding: 16px;
+      border: 1px solid $primary;
+      border-radius: 5px;
+
+      .product-prodname {
+        -webkit-line-clamp: 2;
+        display: box;
+        box-orient: vertical;
+        overflow: hidden;
+      }
+
+      .tooltip-text {
+        color: #fff !important;
+      }
+
+      .rtl-class & {
+        direction: rtl;
+      }
+
+      img {
+        border-radius: 5px;
+      }
+
+      &:hover {
+        background-color: $primary-5;
+        cursor: pointer;
+      }
+    }
+
+    @include mq($q10) {
+      width: 100% !important;
+    }
+
+    @include mq($q428) {
+      width: 100% !important;
+    }
+  }
+}

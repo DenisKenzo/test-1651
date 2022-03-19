@@ -1,0 +1,41 @@
+@import "../../../assets/mixins";
+@import "../../../assets/variables";
+
+.Location {
+  background-color: white;
+  border-radius: 30px;
+  display: flex;
+  position: absolute;
+  right: 16px;
+  top: 16px;
+
+  @media (min-width: ($grid-breakpoint-xs)) and (max-width: ($grid-breakpoint-sm)) {
+    white-space: normal;
+    padding: 0;
+  }
+
+  @media (min-width: ($grid-breakpoint-sm)) and (max-width: ($grid-breakpoint-md)) {
+    padding: 0;
+  }
+
+  .rtl-class & {
+    right: unset;
+    top: 20px;
+    left: 16px;
+  }
+
+  p {
+    font-weight: 500;
+    color: #000 !important;
+  }
+
+  img {
+    .ltr-class & {
+      margin-right: $spacer-1;
+    }
+
+    .rtl-class & {
+      margin-left: $spacer-1;
+    }
+  }
+}

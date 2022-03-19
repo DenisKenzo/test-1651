@@ -1,0 +1,108 @@
+.notificationsList {
+  @include mq($q834) {
+    width: 688px;
+    height: 448px;
+  }
+
+  @include mq($q428) {
+    width: 343px;
+    height: 536px;
+  }
+
+  @include mq($q1) {
+    width: 310px;
+    height: 536px;
+  }
+
+  .ScrollbarsCustom-Track.ScrollbarsCustom-TrackY {
+    right: 0 !important;
+    margin-top: 6px;
+    width: 5px !important;
+
+    .rtl-class & {
+      right: unset !important;
+      left: 0 !important;
+    }
+  }
+
+  .notification {
+    padding: $spacer-2 0;
+    border-bottom: 1px solid #F2F4F5;
+
+    &:last-child {
+      border-bottom: unset;
+    }
+
+    img {
+      padding: $spacer-3 !important;
+    }
+
+    .notifWrap {
+      display: flex;
+      align-items: center;
+
+      @include mq($q14) {
+        display: flex;
+        align-items: flex-end;
+      }
+
+      .time {
+        p {
+          font-size: 12px !important;
+          color: $dark-50 !important;
+        }
+      }
+
+      .description {
+        white-space: normal;
+
+        p {
+          font-size: 14px !important;
+          color: $dark-50 !important;
+        }
+      }
+    }
+
+    &:hover {
+      background-color: $primary-5;
+    }
+
+    .status-container {
+      margin-left: auto;
+
+      .rtl-class & {
+        margin-left: unset;
+        margin-right: auto;
+      }
+
+      .status {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        margin: $spacer-3;
+
+        &.unread {
+          background-color: #23AE15;
+        }
+
+        &.read {
+          background-color: #D9DEE0;
+        }
+      }
+    }
+  }
+}
+
+.clear_btn {
+  p {
+    &:hover {
+      color: $primary !important;
+    }
+  }
+}
+
+.notifications-dropdown {
+  .description {
+    display: none;
+  }
+}

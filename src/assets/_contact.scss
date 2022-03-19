@@ -1,0 +1,168 @@
+.contactPage {
+  text-align: initial;
+
+  .hide-desktop {
+    display: none;
+
+    @media (max-width: ($grid-breakpoint-md)-1) {
+      display: flex;
+    }
+  }
+
+  .hide-mobile {
+    display: flex;
+
+    @media (max-width: ($grid-breakpoint-md)-1) {
+      display: none;
+    }
+  }
+
+  .contact_main_block {
+    @media (max-width: ($grid-breakpoint-lg)-1) {
+      margin-top: 0;
+      flex-direction: column-reverse;
+    }
+  }
+
+  .block_registered {
+    background: #FFF7F2;
+    border-radius: 5px;
+    padding: 118px;
+    height: 100%;
+    animation: bounceOut 2s;
+
+    @media (max-width: ($grid-breakpoint-md)-1) {
+      padding: 32px;
+      margin-top: $spacer-6;
+    }
+
+    .img-success {
+      width: 104px;
+      height: 104px;
+      animation: bounceIn 2s;
+    }
+
+    @keyframes bounceIn {
+      0% {
+        transform: scale(0.1);
+        opacity: 0;
+      }
+
+      60% {
+        transform: scale(1.2);
+        opacity: 1;
+      }
+
+      100% {
+        transform: scale(1);
+      }
+    }
+  }
+
+  @keyframes bounceOut {
+    0% {
+      transform: scale(0.1);
+    }
+
+    60% {
+      transform: scale(1);
+    }
+  }
+
+  .margin-company {
+    margin-top: $spacer-5;
+  }
+
+  .margin-company-custom {
+    @media (max-width: ($grid-breakpoint-lg)-1) {
+      margin-top: $spacer-4;
+    }
+  }
+
+  .margin-subject-custom {
+    margin-bottom: $spacer-6;
+
+    @media (max-width: ($grid-breakpoint-lg)-1) {
+      margin-bottom: $spacer-4;
+    }
+  }
+
+  .contact_block {
+    border: 1px solid #D9DEE0;
+    padding: $spacer-4;
+    border-radius: 5px;
+    margin-top: 24px;
+
+    @media (max-width: ($grid-breakpoint-sm)) {
+      padding: 0.5rem;
+    }
+
+    .round-block {
+      background: $primary-5;
+      border-radius: 100px;
+      width: 80px;
+      height: 80px;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &.round-block-64 {
+        width: 64px;
+        height: 64px;
+      }
+
+      &.border-round {
+        border: 2px solid $primary;
+      }
+    }
+  }
+
+  .faq-block {
+    border-radius: 5px;
+    background-color: $primary;
+    padding: $spacer-4;
+    width: 100%;
+    text-align: center;
+
+    @media (max-width: ($grid-breakpoint-sm)) {
+      width: revert;
+    }
+
+    .round-block {
+      background: white;
+      border-radius: 100px;
+      width: 64px;
+      height: 64px;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    h3 {
+      color: white !important;
+    }
+
+    .rtl-class & {
+      button img {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  .map {
+    height: 100%;
+    width: 100%;
+    margin-top: 8px;
+
+    .map_block {
+      height: 590px;
+
+      @media (max-width: ($grid-breakpoint-lg)-1) {
+        height: 316px;
+        margin-top: 40px;
+      }
+    }
+  }
+}

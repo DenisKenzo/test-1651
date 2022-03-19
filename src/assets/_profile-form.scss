@@ -1,0 +1,88 @@
+.profile-form {
+  .directName {
+    direction: rtl;
+  }
+
+  .checkbox-form {
+    margin-right: $spacer-6;
+    margin-top: 32px;
+
+    .rtl-class & {
+      margin-right: unset;
+      margin-left: $spacer-6;
+    }
+  }
+
+  .agreement {
+    .not-active {
+      color: black !important;
+    }
+  }
+
+  .date {
+    margin-right: $spacer-5;
+
+    .rtl-class & {
+      margin-right: unset;
+      margin-left: $spacer-5;
+    }
+  }
+
+  .margin-cutom-form {
+    margin-top: $spacer-6;
+
+    @media (max-width: ($grid-breakpoint-md)-1) {
+      margin-top: $spacer-4;
+    }
+  }
+
+  .geo {
+    position: absolute;
+    bottom: 20px;
+    left: 29px;
+
+    &:hover:not(.geo-disabled) {
+      cursor: pointer;
+      opacity: 0.6;
+    }
+
+    &.geo-no {
+      img {
+        filter: grayscale(100%);
+      }
+    }
+
+    &.geo-disabled {
+      img {
+        filter: grayscale(100%);
+        opacity: 0.4;
+        cursor: not-allowed;
+      }
+    }
+  }
+
+  .geoEN {
+    position: absolute;
+    bottom: 20px;
+    right: 29px;
+
+    &:hover:not(.geo-disabled) {
+      cursor: pointer;
+      opacity: 0.6;
+    }
+
+    &.geo-no {
+      img {
+        filter: grayscale(100%);
+      }
+    }
+
+    &.geo-disabled {
+      img {
+        filter: grayscale(100%);
+        opacity: 0.4;
+        cursor: not-allowed;
+      }
+    }
+  }
+}

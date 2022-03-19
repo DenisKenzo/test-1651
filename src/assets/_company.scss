@@ -1,0 +1,145 @@
+.company {
+  .container-fluid {
+    min-height: 400px;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    padding: 0;
+    background-size: cover;
+    text-align: initial;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    .overlay-block {
+      background: linear-gradient(180deg, rgba(0, 17, 23, 0) 0%, #001117 100%);
+      width: 100%;
+      padding: 3rem 0;
+    }
+
+    .all-contact {
+      @media (max-width: ($grid-breakpoint-lg)-1) {
+        flex-direction: column;
+      }
+
+      // align-items: flex-end;
+
+      @media (max-width: ($grid-breakpoint-md)-1) {
+        align-items: initial;
+      }
+
+      .st-block {
+        @media (max-width: ($grid-breakpoint-lg)-1) {
+          flex-direction: column;
+        }
+      }
+    }
+
+    .logo-block {
+      padding: $spacer-5;
+      width: 150px;
+      border-radius: 5px;
+      margin-right: $spacer-4;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+
+      @media (max-width: ($grid-breakpoint-lg)-1) {
+        margin-top: $spacer-5;
+      }
+
+      img {
+        height: 32px;
+      }
+
+      .rtl-class & {
+        margin-right: unset;
+        margin-left: $spacer-4;
+      }
+    }
+
+    .btn-link {
+      background: #FFF;
+      box-shadow: 0 4px 16px rgba(254, 89, 0, 0.08);
+      border-radius: 5px;
+      padding: $spacer-2 $spacer-3;
+      display: flex;
+      align-items: center;
+      width: fit-content;
+
+      @media (max-width: ($grid-breakpoint-lg)-1) {
+        margin: $spacer-2 0;
+      }
+
+      p {
+        color: $primary !important;
+        font-weight: bold;
+      }
+
+      img {
+        margin-left: $spacer-12;
+
+        .rtl-class & {
+          margin-left: unset;
+          margin-right: $spacer-12;
+        }
+      }
+    }
+
+    .company-name {
+      margin-bottom: $spacer-2;
+
+      @media (max-width: ($grid-breakpoint-lg)-1) {
+        margin-top: $spacer-3;
+      }
+
+      p {
+        text-shadow: 0 2px 2px rgba(0, 0, 0, 0.16);
+        font-size: 36px !important;
+        line-height: 48px !important;
+        letter-spacing: 0.2px !important;
+        color: #FFF !important;
+      }
+    }
+
+    .info-text-contact {
+      //flex-wrap: wrap;
+
+      @media (max-width: ($grid-breakpoint-md)-1) {
+        flex-direction: column;
+        align-items: initial !important;
+      }
+
+      div {
+        @media (max-width: ($grid-breakpoint-lg)-1) {
+          margin-top: $spacer-2;
+        }
+
+        margin-right: $spacer-4;
+
+        .rtl-class & {
+          // margin-right: unset;
+          // margin-left: $spacer-4;
+          direction: ltr;
+        }
+      }
+
+      p {
+        color: #FFF !important;
+
+        .rtl-class & {
+          // margin-right: unset;
+          // margin-left: $spacer-12;
+          direction: ltr;
+        }
+      }
+
+      img {
+        margin-right: $spacer-12;
+
+        .rtl-class & {
+          // margin-right: unset;
+          // margin-left: $spacer-12;
+          direction: ltr;
+        }
+      }
+    }
+  }
+}

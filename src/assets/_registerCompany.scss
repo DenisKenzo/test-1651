@@ -1,0 +1,57 @@
+.registerCompany {
+  text-align: initial;
+
+  .block_registered {
+    background: #FFF7F2;
+    border-radius: 5px;
+    padding: 118px;
+    animation: bounceOut 2s;
+
+    @media (max-width: ($grid-breakpoint-md)-1) {
+      padding: 32px;
+      margin-top: $spacer-6;
+    }
+
+    .img-success {
+      width: 104px;
+      height: 104px;
+      animation: bounceIn 2s;
+    }
+
+    @keyframes bounceIn {
+      0% {
+        transform: scale(0.1);
+        opacity: 0;
+      }
+
+      60% {
+        transform: scale(1.2);
+        opacity: 1;
+      }
+
+      100% {
+        transform: scale(1);
+      }
+    }
+  }
+
+  @keyframes bounceOut {
+    0% {
+      transform: scale(0.1);
+    }
+
+    60% {
+      transform: scale(1);
+    }
+  }
+
+  .margin-company {
+    margin-top: $spacer-5;
+  }
+
+  .margin-company-custom {
+    @media (max-width: ($grid-breakpoint-lg)-1) {
+      margin-top: $spacer-4;
+    }
+  }
+}

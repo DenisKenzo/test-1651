@@ -1,0 +1,81 @@
+@import "../../../assets/mixins";
+@import "../../../assets/variables";
+
+.Ribbon {
+  position: absolute;
+  left: 0;
+  background-size: cover;
+  color: white;
+  width: 100%;
+  top: 0;
+
+  &-Wrap {
+    height: 32px;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    padding-right: 6px;
+    position: absolute;
+    font-size: 15px;
+    left: -16px;
+    top: 16px;
+    background: #23AE15;
+    border-radius: 3px 0 0;
+    text-align: initial;
+
+    @media (min-width: ($grid-breakpoint-xs)) and (max-width: ($grid-breakpoint-sm)) {
+      left: -15px;
+    }
+
+    @media (min-width: ($grid-breakpoint-sm)) and (max-width: ($grid-breakpoint-smm)) {}
+
+    @include mq($q428) {
+      font-size: 14px;
+    }
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+    }
+
+    &::before {
+      height: 0;
+      width: 0;
+      bottom: -7.5px;
+      left: 0.1px;
+      border-top: 8px solid #0B7800;
+      border-left: 16px solid transparent;
+
+      .rtl-class & {
+        right: 0.1px;
+        border-right: 16px solid transparent;
+        border-left: 0;
+      }
+    }
+
+    &::after {
+      height: 0;
+      width: 0;
+      right: -15px;
+      border-top: 16px solid $secondary;
+      border-bottom: 16px solid $secondary;
+      border-right: 16px solid transparent;
+      top: 0;
+
+      .rtl-class & {
+        right: unset;
+        left: -15px;
+        border-left: 16px solid transparent;
+      }
+    }
+
+    .rtl-class & {
+      left: unset;
+      right: -16px;
+      padding-left: 6px;
+      padding-right: 5px;
+      width: auto;
+    }
+  }
+}

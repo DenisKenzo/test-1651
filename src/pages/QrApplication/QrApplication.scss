@@ -1,0 +1,201 @@
+@import "../../assets/mixins";
+@import "../../assets/variables";
+
+.QrApplication {
+  margin: 128px 336px;
+
+  @include mq($q18) {
+    margin: 128px;
+  }
+
+  @include mq($q13) {
+    margin: 40px;
+  }
+
+  @include mq($q8) {
+    margin: 24px 16px;
+  }
+
+  &-Row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include mq($q13) {
+      flex-direction: column-reverse;
+    }
+
+    &__QR,
+    &__App {
+      flex-basis: 48%;
+    }
+
+    &__App {
+      @include mq($q13) {
+        flex-basis: 100%;
+        display: flex;
+        justify-content: center;
+      }
+
+      img {
+        width: 100%;
+
+        @include mq($q13) {
+          width: 70%;
+        }
+      }
+    }
+
+    &__QR {
+      .rtl-class & {
+        text-align: right;
+      }
+
+      @include mq($q13) {
+        margin-top: 32px;
+      }
+
+      .Title {
+        letter-spacing: 0.2px;
+        font-weight: bold;
+        font-size: 48px;
+        line-height: 56px;
+        font-family: $font-default-family;
+        color: $dark;
+        margin-bottom: 16px;
+
+        @include mq($q13) {
+          text-align: center;
+        }
+
+        @include mq($q9) {
+          font-size: 32px;
+          line-height: 40px;
+        }
+      }
+
+      .Desc {
+        color: $dark-75;
+        font-weight: normal;
+        font-size: 22px;
+        line-height: 32px;
+        letter-spacing: 0.2px;
+
+        @include mq($q13) {
+          text-align: center;
+        }
+
+        @include mq($q9) {
+          font-size: 20px;
+          line-height: 32px;
+        }
+      }
+
+      &-List {
+        display: flex;
+        margin-top: 48px;
+
+        @include mq($q3) {
+          flex-direction: column;
+        }
+
+        @include mq($q13) {
+          justify-content: center;
+          margin-top: 32px;
+        }
+
+        @include mq($q3) {
+          justify-content: space-between;
+        }
+
+        .QR-Item {
+          display: flex;
+          flex-direction: column;
+
+          & > img {
+            border: 2px solid #EBEDEE;
+            border-radius: 8px;
+
+            @include mq($q13) {
+              display: none;
+            }
+          }
+
+          &:first-child {
+            margin-right: 32px;
+
+            .rtl-class & {
+              margin-right: unset;
+              margin-left: 32px;
+            }
+
+            @include mq($q9) {
+              margin-right: 12px;
+            }
+
+            @include mq($q3) {
+              margin-right: 0;
+            }
+          }
+
+          &__Link {
+            background: $dark;
+            box-shadow: 0 4px 16px rgba(254, 89, 0, 0.08);
+            border-radius: 5px;
+            padding: 8px 16px;
+            margin-top: 32px;
+
+            &:hover {
+              background: white;
+
+              .App-Item {
+                img {
+                  filter: unset;
+                }
+              }
+
+              .Download,
+              .Name {
+                color: $dark;
+              }
+            }
+
+            &-Item {
+              display: flex;
+
+              &.App-Item {
+                img {
+                  filter: brightness(0) invert(1);
+                }
+              }
+
+              & > div {
+                margin-left: 16px;
+
+                .rtl-class & {
+                  margin-left: unset;
+                  margin-right: 16px;
+                }
+              }
+
+              .Download {
+                letter-spacing: 0.2px;
+                color: #D9DEE0;
+                font-weight: normal;
+                font-size: 12px;
+                line-height: 16px;
+              }
+
+              .Name {
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 24px;
+                color: white;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

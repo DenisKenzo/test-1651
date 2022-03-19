@@ -1,0 +1,193 @@
+@import "../../../assets/mixins";
+@import "../../../assets/variables";
+
+.PriceInfo {
+  margin-top: 123px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  @include mq($q16) {
+    align-items: flex-start;
+    flex-direction: column;
+    margin-top: 40px;
+  }
+
+  @include mq($q15) {
+    margin-top: 30px;
+  }
+
+  @include mq($q14) {
+    flex-direction: row;
+  }
+
+  @include mq($q12) {
+    align-items: flex-start;
+  }
+
+  @include mq($q11) {
+    flex-wrap: wrap;
+  }
+
+  @include mq($q9) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  &.PriceInfo-QuickModal {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    margin-top: 32px;
+
+    .RTL & {
+      //flex-direction: row-reverse;
+      width: 100%;
+      align-items: flex-end;
+    }
+
+    .btn {
+      width: 352px;
+    }
+
+    .PriceInfo-Detail {
+      .Discount {
+        font-size: 27px;
+        line-height: 24px;
+
+        .RTL & {
+          order: 1;
+          margin-right: 3px;
+        }
+      }
+
+      .Price {
+        font-size: 56px;
+        line-height: 72px;
+
+        .RTL & {
+          order: 3;
+        }
+      }
+
+      .Currency {
+        font-size: 32px;
+        line-height: 48px;
+
+        .RTL & {
+          order: 2;
+        }
+      }
+    }
+  }
+
+  .SocialHide {
+    margin-left: 16px;
+
+    @include mq($q9) {
+      margin-left: 0;
+    }
+
+    .m-2 {
+      margin: 0 !important;
+    }
+
+    a {
+      img {
+        width: 40px;
+        height: 40px;
+      }
+    }
+  }
+
+  .btn {
+    // margin-left: 40px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    padding: 8px 32px;
+    font-size: 17px;
+    line-height: 32px;
+    letter-spacing: 0.6px !important;
+
+    @include mq($q18) {
+      // margin-left: 32px;
+    }
+    // @include mq($q16) {
+    //   margin: 32px 0 0 0;
+    // }
+    // @include mq($q12) {
+    //   padding: 8px 16px;
+    //   margin: 24px 0 32px 24px;
+    // }
+    @include mq($q9) {
+      margin-left: 0;
+    }
+
+    .rtl-class & {
+      // margin-right: 30px;
+      // margin-left: 0;
+      @include mq($q9) {
+        // margin-right: 0;
+      }
+    }
+  }
+
+  .PriceInfo-Detail {
+    display: flex;
+    align-items: baseline;
+
+    .Discount {
+      color: #01222E;
+      text-transform: uppercase;
+      margin-left: 8px;
+      font-weight: 500;
+      font-size: 34px;
+      line-height: 40px;
+      font-family: $font-default-family !important;
+      letter-spacing: 0.2px;
+
+      @include mq($q14) {
+        font-size: 20px;
+        line-height: 24px;
+      }
+
+      .rtl-class & {
+        order: 3;
+        margin-left: 0;
+        margin-right: 3px;
+      }
+    }
+
+    .Price {
+      font-size: 68px;
+      line-height: 72px;
+      font-family: $font-default-family !important;
+      margin-left: 4px;
+      font-weight: 500;
+
+      @include mq($q14) {
+        font-size: 32px;
+        line-height: 72px;
+      }
+
+      .rtl-class & {
+        order: 1;
+      }
+    }
+
+    .Currency {
+      font-weight: 500;
+      font-size: 42px;
+      line-height: 48px;
+      font-family: $font-button-family !important;
+
+      @include mq($q14) {
+        font-size: 24px;
+        line-height: 32px;
+      }
+
+      .rtl-class & {
+        order: 2;
+      }
+    }
+  }
+}

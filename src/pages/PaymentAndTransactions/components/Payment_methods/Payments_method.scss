@@ -1,0 +1,249 @@
+@import "../../../../assets/mixins";
+@import "../../../../assets/variables";
+
+.cardWrapper {
+  width: 351px;
+  height: 212px;
+  background: #FFF;
+  position: relative;
+  border: 1px solid #EBEDEE;
+  border-left: 5px solid #FE5900;
+
+  @include mq($q14) {
+    width: 332px;
+    height: 180px;
+  }
+
+  @include mq($q428) {
+    width: 343px;
+    height: 164px;
+  }
+
+  .photo {
+    margin-left: 30px;
+    margin-right: 50px;
+  }
+
+  .addNew {
+    white-space: normal;
+    width: 135px;
+  }
+
+  .paymentsDetails {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+
+    .photo {
+      margin-right: 40px;
+      margin-left: 23px;
+      position: relative;
+      top: 30px;
+
+      @include mq($q14) {
+        top: 16px;
+      }
+    }
+
+    .cardTitle {
+      font-family: Heebo !important;
+      font-style: normal;
+      font-weight: 500 !important;
+      font-size: 18px !important;
+      line-height: 24px !important;
+      color: #01222E !important;
+      margin-bottom: 16px;
+    }
+
+    .ssss {
+      position: relative;
+      top: 40px;
+      
+      @include mq($q14) {
+        top: 16px;
+      }
+    }
+
+    .cardNumber {
+      font-family: Heebo !important;
+      font-style: normal;
+      font-weight: normal !important;
+      font-size: 12px !important;
+      line-height: 16px !important;
+      color: #BFC8CB !important;
+    }
+  }
+
+  hr {
+    width: 300px;
+    bottom: 56px;
+    position: absolute;
+    margin-top: initial;
+    margin-left: 24px;
+    border: 1px solid #D9DEE0;
+    margin-bottom: initial;
+
+    @include mq($q14) {
+      margin-left: 14px;
+    }
+
+    @include mq($q3){
+ 
+    }
+  }
+
+  .footerCard {
+    margin: -10px 24px;
+    position: absolute;
+    bottom: 0;
+
+    @include mq($q14) {
+      margin: -10px 14px;
+    }
+
+    .text {
+      font-family: Heebo !important;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14px !important;
+      white-space: nowrap;
+      line-height: 24px !important;
+      color: #D9DEE0;
+    }
+  }
+}
+
+.add-payment-message {
+  width: 1120px;
+  height: 58px;
+  background-color: #FFF7F2 ;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 16px;
+  margin-top: 48px;
+
+  @include mq($q14) {
+    width: 790px;
+  }
+
+  @include mq($q834) {
+    width: 688px;
+  }
+
+  @include mq($q428) {
+    width: 343px;
+  }
+
+  @include mq($q2) {
+    width: 330px;
+  }
+
+  @include mq($q1) {
+    width: 295px;
+  }
+
+  .payment-text {
+    font-family: Heebo !important;
+    font-style: normal;
+    font-weight: 500 !important;
+    font-size: 18px;
+    line-height: 24px !important;
+
+    /* identical to box height, or 133% */
+
+    letter-spacing: 0.2px !important;
+
+    /* Color/Neutral/Black */
+
+    color: #01222E !important;
+  }
+}
+
+.cardAddNewWrapper {
+  width: 351px;
+  height: 212px;
+  cursor: pointer;
+  position: relative;
+  background: #FFF;
+  border: 1px dashed #BFC8CB;
+
+  @include mq($q14) {
+    width: 332px;
+    height: 180px;
+  }
+
+  @include mq($q428) {
+    width: 343px;
+    height: 164px;
+  }
+
+  .sadsdasad {
+    position: relative;
+    top: 38px;
+    align-items: center;
+    display: flex;
+
+    .photoAddNew {
+      margin-left: 30px;
+      margin-right: 50px;
+
+      @include mq($q14) {
+        margin-right: 19px;
+      }
+    }
+
+    .addNew {
+      white-space: normal;
+      width: 150px;
+      font-family: Heebo !important;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 18px !important;
+      line-height: 24px !important;
+      color: #01222E !important;
+    }
+  }
+
+  hr {
+    width: 300px;
+    bottom: 56px;
+    position: absolute;
+    margin-top: initial;
+    margin-left: 24px;
+    border: 1px solid #D9DEE0;
+    margin-bottom: initial;
+  }
+}
+
+.footerAddPayment {
+  font-family: Heebo !important;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px !important;
+  line-height: 24px !important;
+  color: #415962 !important;
+  display: flex;
+  align-items: center;
+  margin-left: 24px;
+  position: absolute;
+  bottom: 16px;
+}
+
+.wrapMethod {
+  flex-direction: row;
+  display: flex;
+
+  @include mq($q14) {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .renderCard {
+    @include mq($q14) {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}

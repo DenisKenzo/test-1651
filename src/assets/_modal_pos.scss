@@ -1,0 +1,18 @@
+.modal_pos {
+  .numbers-pos {
+    border: 1px dashed #D9DEE0;
+    box-sizing: border-box;
+    border-radius: 5px;
+
+    >div {
+      font-weight: bold;
+      padding: 0 $spacer-12;
+      margin: $spacer-3 0;
+      border-right: 1px solid #D9DEE0;
+
+      &:last-child {
+        border: unset;
+      }
+    }
+  }
+}

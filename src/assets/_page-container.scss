@@ -1,0 +1,31 @@
+.pageContainer {
+  width: 100%;
+  padding-right: 16px;
+  padding-left: 16px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.description {
+  p {
+    background-color: #fff !important;
+  }
+}
+
+@media (min-width: 1280px) {
+  .pageContainer {
+    max-width: 85%;
+  }
+}
+
+@media (max-width: 1279px) {
+  .pageContainer {
+    max-width: 95%;
+  }
+}
+
+@media (max-width: 425px) {
+  .pageContainer {
+    max-width: 100%;
+  }
+}

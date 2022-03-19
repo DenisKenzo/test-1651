@@ -1,0 +1,6 @@
+export const alertsConstants = {
+  ADD_ALERTS: 'ADD_ALERTS',
+  HIDE_ALERTS: 'HIDE_ALERTS',
+  REMOVE_ALERTS: 'REMOVE_ALERTS',
+  LOCATION: 'LOCATION',
+};

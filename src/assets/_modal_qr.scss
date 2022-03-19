@@ -1,0 +1,41 @@
+.modal_qr {
+  
+  @media (max-width: ($grid-breakpoint-lg)-1) {
+    height: auto !important;
+    max-height: 100%;
+    overflow-y: auto;
+    display: block !important;
+  }
+
+  @media (max-width: ($grid-breakpoint-xl)-1) {
+    display: block !important;
+  }
+
+  .modal-body {
+    background-color: $primary;
+    border-radius: 8px;
+
+    .p-white {
+      color: white !important;
+    }
+
+    .qr-block {
+      width: 368px;
+      padding: 40px;
+
+      .qr {
+        position: relative;
+        background: #FFF;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.16);
+        border-radius: 8px;
+        padding: $spacer-4;
+      }
+
+      .coupon-code {
+        background-color: white;
+        padding: 1rem;
+        border-radius: 5px;
+      }
+    }
+  }
+}

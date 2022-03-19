@@ -1,0 +1,26 @@
+.notFoundPage {
+  .not_found_status {
+    p {
+      font-weight: bold !important;
+      font-size: 48px !important;
+      line-height: 56px !important;
+      color: #01222E !important;
+    }
+  }
+
+  .link_block {
+    border: 1px solid #D9DEE0;
+    padding: $spacer-5 $spacer-2;
+    border-radius: 5px;
+
+    @media (max-width: ($grid-breakpoint-lg)-1) {
+      margin-top: $spacer-4;
+    }
+
+    &:hover {
+      background: $primary-5;
+      cursor: pointer;
+      border: 1px solid $primary;
+    }
+  }
+}

@@ -1,0 +1,23 @@
+.ScrollbarsCustom-Track {
+  background: #FFD5BF !important;
+  top: unset !important;
+
+  .ScrollbarsCustom-Thumb {
+    background: #FE5900 !important;
+  }
+
+  &.ScrollbarsCustom-TrackY {
+    right: -13px !important;
+    height: calc(100% - 10px) !important;
+  }
+
+  .rtl-class & {
+    right: unset !important;
+    left: -13px !important;
+  }
+
+  &.ScrollbarsCustom-TrackX {
+    width: 100% !important;
+    left: 0 !important;
+  }
+}

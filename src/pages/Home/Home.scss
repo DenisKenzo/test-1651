@@ -1,0 +1,968 @@
+@import "../../assets/mixins";
+@import "../../assets/variables";
+
+.Home {
+  position: relative;
+  overflow-x: hidden;
+
+  .suitable-category {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  .height-ru {
+    min-height: 150px;
+  }
+
+  .categories-suitable-for-me {
+    .categories_block {
+      margin-right: -16px;
+
+      @include mq($q2100) {
+        margin-right: -10px;
+      }
+
+      .rtl-class & {
+        @include mq($q14) {
+          margin-right: -16px;
+        }
+
+        @include mq($q10) {
+          margin-right: 0;
+        }
+
+        @include mq($q428) {
+          margin-left: -10px;
+          margin-right: unset;
+        }
+      }
+
+      .he-category {
+        :first-child {
+          margin-right: 0;
+        }
+
+        :last-child {
+          margin-left: 0;
+        }
+      }
+
+      .en-category {
+        :first-child {
+          margin-left: 0;
+        }
+
+        :last-child {
+          margin-right: 0;
+        }
+      }
+
+      .categories_block_nowrap {
+        white-space: nowrap !important;
+        display: flex;
+
+        >div {
+          display: inline-block;
+          float: none;
+          width: 102% !important;
+          // width: 1504px;
+          margin: 0 8px;
+
+          @include mq($q2100) {
+            width: 102%;
+          }
+
+          @include mq($q20) {
+            // width: 1504px;
+            width: 102%;
+          }
+
+          @include mq($q14) {
+            // width: 1215px;
+            width: 102%;
+          }
+
+          @include mq($q16) {
+            width: 102%;
+          }
+
+          @include mq($q12) {
+            width: 728px;
+          }
+
+          @include mq($q834) {
+            width: 775px;
+          }
+
+          @include mq($q820) {
+            width: 755px;
+          }
+
+          @include mq($q10) {
+            width: 710px;
+          }
+
+          @include mq($q428) {
+            width: 600px;
+          }
+
+          @include mq($q390) {
+            width: 523px;
+          }
+
+          @include mq($q3) {
+            width: 560px;
+          }
+
+          @include mq($q1) {
+            width: 500px;
+          }
+
+          .rtl-class & {
+            @include mq($q10) {
+              width: 755px;
+            }
+
+            @include mq($q428) {
+              width: 600px;
+            }
+
+            @include mq($q390) {
+              width: 523px;
+            }
+
+            @include mq($q3) {
+              width: 560px;
+            }
+
+            @include mq($q2) {
+              width: 530px;
+            }
+
+            @include mq($q1) {
+              width: 500px;
+            }
+          }
+
+          &:first-child {}
+
+          &:last-child {
+            padding-right: 8px;
+
+            @include mq($q20) {
+              padding-right: 8px;
+            }
+
+            @include mq($q1800) {
+              padding-right: 160px;
+            }
+
+            @include mq($q17) {
+              padding-right: 200px;
+            }
+
+            @include mq($q16) {
+              padding-right: 8px;
+            }
+
+            @include mq($q428) {
+              padding-right: 75px;
+            }
+
+            @include mq($q390) {
+              padding-right: 0;
+            }
+
+            @include mq($q3) {
+              padding-right: 40px;
+            }
+
+            @include mq($q2) {
+              padding-right: 50px;
+            }
+
+            @include mq($q2) {
+              padding-right: 30px;
+            }
+          }
+
+          .rtl-class & {
+            &:first-child {
+              margin-right: 0;
+              margin-left: 8px;
+            }
+
+            &:last-child {
+              padding-left: 8px;
+              padding-right: initial;
+
+              @include mq($q2100) {
+                padding-left: 34px;
+                padding-right: initial;
+              }
+
+              @include mq($q20) {
+                padding-left: 8px;
+                padding-right: initial;
+              }
+
+              @include mq($q1800) {
+                padding-left: 178px;
+                padding-right: initial;
+              }
+
+              @include mq($q17) {
+                padding-left: 190px;
+                padding-right: initial;
+              }
+
+              @include mq($q16) {
+                padding-left: 8px;
+                padding-right: initial;
+              }
+
+              @include mq($q428) {
+                padding-right: 75px;
+                padding-left: initial;
+              }
+
+              @include mq($q390) {
+                padding-right: 0;
+              }
+
+              @include mq($q3) {
+                padding-right: 40px;
+              }
+
+              @include mq($q2) {
+                padding-right: 0;
+              }
+
+              @include mq($q1) {
+                padding-right: 30px;
+              }
+            }
+          }
+
+          img {
+            width: 48px;
+            height: 48px;
+
+            @include mq($q12) {
+              width: 31px;
+              height: 31px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &-ExtraCoupon {
+    background-image: url('../../assets/images/background-wave.svg');
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+    justify-content: center;
+    overflow-x: hidden;
+
+    &__Row {
+      @include container;
+
+      &-Title {
+        text-transform: uppercase;
+        padding-top: 36px;
+
+        &.ruTitle {
+          @media (max-width: 450px) {
+            h2 {
+              font-size: 25px;
+            }
+          }
+
+          @media (max-width: 420px) {
+            h2 {
+              font-size: 23px;
+            }
+          }
+
+          @media (max-width: 374px) {
+            h2 {
+              font-size: 20px;
+            }
+          }
+        }
+
+        .rtl-class & {
+          text-align: right;
+        }
+      }
+
+      &-SpecialDeals {
+        display: flex;
+        justify-content: space-between;
+
+        @include mq($q10) {
+          flex-direction: column;
+        }
+
+        .Ribbon {
+          position: absolute;
+          left: 0;
+          background-size: cover;
+          color: white;
+          width: 100%;
+          top: 0;
+
+          &-Wrap {
+            display: flex;
+            height: 32px;
+            padding-left: 10px;
+            padding-right: 6px;
+            position: absolute;
+            font-size: 15px;
+            left: -16px;
+            top: 16px;
+            background: #23AE15;
+            border-radius: 3px 0 0;
+            text-align: initial;
+
+            @media (min-width: ($grid-breakpoint-xs)) and (max-width: ($grid-breakpoint-sm)) {
+              left: -15px;
+            }
+
+            @media (min-width: ($grid-breakpoint-sm)) and (max-width: ($grid-breakpoint-smm)) {}
+
+            // @include mq($q428) {
+            //   top: 5px;
+            // }
+            &::before,
+            &::after {
+              content: "";
+              position: absolute;
+            }
+
+            &::before {
+              height: 0;
+              width: 0;
+              bottom: -7.5px;
+              left: 0.1px;
+              border-top: 8px solid #0B7800;
+              border-left: 16px solid transparent;
+
+              .rtl-class & {
+                right: 0.1px;
+                border-right: 16px solid transparent;
+                border-left: 0;
+              }
+            }
+
+            &::after {
+              height: 0;
+              width: 0;
+              right: -15px;
+              border-top: 16px solid $secondary;
+              border-bottom: 16px solid $secondary;
+              border-right: 16px solid transparent;
+              top: 0;
+
+              .rtl-class & {
+                right: unset;
+                left: -15px;
+                border-left: 16px solid transparent;
+              }
+            }
+
+            .rtl-class & {
+              left: unset;
+              right: -16px;
+              padding-left: 5px;
+              width: auto;
+              padding-right: 16px;
+            }
+          }
+        }
+
+        .ExtraCouponCard {
+          border: 1px solid #F2F4F5;
+          border-radius: 5px;
+
+          a {
+            width: 100%;
+          }
+
+          &:last-child {
+            margin-left: 30px;
+
+            @include mq($q9) {
+              margin-left: 0;
+            }
+
+            .rtl-class & {
+              margin-left: unset;
+              margin-right: 30px;
+
+              @include mq($q9) {
+                margin-right: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    @media (max-width: ($grid-breakpoint-md)-1) {
+      background-size: auto;
+    }
+  }
+
+  &-BannerSlider {
+    @include container;
+
+    .slick-track {
+      height: fit-content;
+
+      .slick-slide {
+        height: fit-content;
+      }
+    }
+
+    .slick-dots {
+      bottom: 1px;
+
+      @include mq($q428) {
+        top: -35px;
+      }
+
+      li {
+        margin: 0 -3px !important;
+      }
+
+      li button::before {
+        color: $primary;
+      }
+    }
+
+    @media (max-width: ($grid-breakpoint-md)-1) {
+      width: 100% !important;
+      max-width: none !important;
+    }
+
+    @include mq($q428) {
+      width: initial !important;
+      margin: 0 40px;
+    }
+
+    @include mq($q390) {
+      margin: 0 20px;
+    }
+
+    @include mq($q2) {
+      margin: 0 10px;
+    }
+
+    @include mq($q1) {
+      margin: 0;
+    }
+
+    @include mq($q7) {
+      display: none;
+    }
+
+    .Banner-Slide {
+      height: 316px;
+      object-fit: contain;
+
+      @include mq($q18) {
+        height: 280px;
+      }
+
+      @include mq($q428) {
+        height: 173px;
+        width: 343px;
+      }
+
+      @include mq($q1) {
+        height: 173px;
+        width: 318px;
+      }
+    }
+
+    &-Top_Categories {
+      margin-bottom: 42px;
+    }
+  }
+
+  &-Top_Categories {
+    display: flex;
+
+    @include container;
+
+    &__Row {
+      width: 100%;
+      margin-top: 32px;
+
+      &-Info {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 24px;
+
+        .Title {
+          font-size: 26px;
+          line-height: 32px;
+          letter-spacing: 0.2px;
+          font-weight: bold;
+          color: $base-black;
+          text-transform: uppercase;
+          font-family: $font-default-family;
+        }
+
+        .ViewAll {
+          font-size: 15px;
+          letter-spacing: 0.6px;
+          font-family: $font-button-family;
+          font-weight: bold;
+        }
+      }
+
+      &-Category {
+        position: relative;
+
+        .List {
+          white-space: nowrap !important;
+
+          & > div {
+            display: inline-block;
+            float: none;
+          }
+
+          &-Category {
+            white-space: nowrap !important;
+            display: flex;
+
+            @include mq($q14) {
+              margin-left: -5px;
+            }
+
+            @include mq($q12) {
+              margin-left: 18px;
+            }
+
+            @include mq($q834) {
+              margin-left: -15px;
+            }
+
+            @include mq($q800) {
+              margin-left: -15px;
+            }
+
+            @include mq($q10) {
+              margin-left: -15px;
+            }
+
+            @include mq($q428) {
+              margin-left: -18px;
+            }
+
+            @include mq($q390) {
+              margin-left: -20px;
+            }
+
+            @include mq($q3) {
+              margin-left: -31px;
+            }
+
+            @include mq($q2) {
+              margin-left: -25px;
+            }
+
+            .rtl-class & {
+              @include mq($q14) {
+                margin-right: 0;
+              }
+
+              @include mq($q12) {
+                margin-right: 18px;
+              }
+
+              @include mq($q800) {
+                margin-right: 10px;
+              }
+
+              @include mq($q10) {
+                margin-right: -9px;
+              }
+
+              @include mq($q428) {
+                margin-right: -150px;
+                margin-left: unset;
+              }
+
+              @include mq($q4) {
+                margin-right: -170px;
+                margin-left: unset;
+              }
+
+              @include mq($q390) {
+                margin-right: -98px;
+                margin-left: unset;
+              }
+
+              @include mq($q3) {
+                margin-right: -150px;
+                margin-left: unset;
+              }
+
+              @include mq($q2) {
+                margin-right: -126px;
+                margin-left: unset;
+              }
+
+              @include mq($q1) {
+                margin-right: -206px;
+                margin-left: unset;
+              }
+            }
+
+            .Categories-Item {
+              display: inline-block;
+              float: none;
+              min-width: 174px;
+              width: initial !important;
+              margin: 0 12px;
+
+              @include mq($q12) {
+                min-width: 150px;
+              }
+
+              &:first-child {
+                margin-left: 0;
+
+                @include mq($q12) {
+                  margin-left: 10px;
+                }
+
+                @include mq($q428) {
+                  margin-left: 10px;
+                }
+
+                @include mq($q3) {
+                  margin-left: 20px;
+                }
+
+                @include mq($q2) {
+                  margin-left: 17px;
+                }
+
+                @include mq($q1) {
+                  margin-left: 13px;
+                }
+
+                .rtl-class & {
+                  @include mq($q10) {
+                    margin-left: 50px;
+                  }
+
+                  @include mq($q428) {
+                    margin-left: 125px;
+                  }
+
+                  @include mq($q393) {
+                    margin-left: 70px;
+                  }
+
+                  @include mq($q390) {
+                    margin-left: 90px;
+                  }
+
+                  @include mq($q4) {
+                    margin-left: 100px;
+                  }
+
+                  @include mq($q2) {
+                    margin-left: 75px;
+                  }
+
+                  @include mq($q1) {
+                    margin-left: 0;
+                  }
+                }
+              }
+
+              img {
+                width: 48px;
+                height: 48px;
+                display: initial;
+              }
+
+              // .rtl-class & {
+              //   &:first-child {
+              //     margin-right: 0;
+              //     margin-left: 8px;
+              //   }
+              //   &:last-child {
+              //     margin-left: 0;
+              //     margin-right: 8px;
+              //     padding-left: 8px;
+              //   }
+              // }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .coupons-container {
+    @include container;
+  }
+
+  div[data-id="tooltip"] {
+    padding: 8px 16px;
+
+    p {
+      color: $base-white !important;
+    }
+  }
+}
+
+.sliderCat {
+  .slick-prev {
+    display: block;
+    background: #fff !important;
+    border-radius: 43px;
+    border: 2px solid #FE5900;
+    box-sizing: border-box;
+    box-shadow: 0 4px 24px rgba(254, 89, 0, 0.08);
+    transform: matrix(-1, 0, 0, 1, 0, 0);
+    left: -60px !important;
+    z-index: 1001 !important;
+    width: 48px !important;
+    height: 48px !important;
+    top: 50px;
+
+    @include mq($q14) {
+      left: -30px !important;
+    }
+
+    @include mq($q834) {
+      left: -20px !important;
+    }
+
+    @include mq($q800) {
+      left: -20px !important;
+    }
+
+    @include mq($q10) {
+      left: -20px !important;
+    }
+
+    @include mq($q428) {
+      display: none !important;
+    }
+
+    .rtl-class & {
+      left: -50px !important;
+
+      @include mq($q2100) {
+        left: -23px !important;
+      }
+
+      @include mq($q20) {
+        left: -50px !important;
+      }
+
+      @include mq($q17) {
+        left: 135px !important;
+      }
+
+      @include mq($q16) {
+        left: -45px !important;
+      }
+
+      @include mq($q14) {
+        left: -20px !important;
+      }
+
+      @include mq($q834) {
+        left: -10px !important;
+      }
+
+      @include mq($q820) {
+        left: -10px !important;
+      }
+
+      @include mq($q800) {
+        left: -5px !important;
+      }
+
+      @include mq($q10) {
+        left: 25px !important;
+      }
+    }
+
+    &::before {
+      background-image: url('../../assets/images/chevron-right-orange.svg');
+      width: 24px;
+      height: 24px;
+      background-repeat: no-repeat;
+      font-size: 6px;
+      position: absolute;
+      left: 12px;
+      top: 11px;
+      content: "";
+    }
+  }
+
+  .slick-next {
+    display: block;
+    background: $primary !important;
+    border-radius: 43px;
+    transform: matrix(-1, 0, 0, 1, 0, 0);
+    right: -35px !important;
+    z-index: 1001 !important;
+    width: 48px !important;
+    height: 48px !important;
+    top: 50px;
+    left: unset !important;
+
+    @include mq($q2100) {
+      right: -5px !important;
+    }
+
+    @include mq($q20) {
+      right: -35px !important;
+    }
+
+    @include mq($q14) {
+      right: 0 !important;
+    }
+
+    @include mq($q834) {
+      right: -16px !important;
+    }
+
+    @include mq($q820) {
+      right: -25px !important;
+    }
+
+    @include mq($q800) {
+      right: -5px !important;
+    }
+
+    @include mq($q10) {
+      right: -15px !important;
+    }
+
+    @include mq($q428) {
+      display: none !important;
+    }
+
+    .rtl-class & {
+      right: -40px !important;
+
+      @include mq($q14) {
+        right: -10px !important;
+      }
+
+      @include mq($q834) {
+        right: -30px !important;
+      }
+
+      @include mq($q820) {
+        right: -30px !important;
+      }
+
+      @include mq($q800) {
+        right: -30px !important;
+      }
+
+      @include mq($q10) {
+        right: -25px !important;
+      }
+    }
+
+    &::before {
+      background-image: url('../../assets/images/chevron-left.svg');
+      width: 24px;
+      height: 24px;
+      background-repeat: no-repeat;
+      font-size: 6px;
+      position: absolute;
+      left: 12px;
+      top: 11px;
+      content: "";
+    }
+  }
+
+  .slick-dots {
+    bottom: -15;
+
+    @include mq($q428) {
+      right: 85px;
+    }
+
+    @include mq($q393) {
+      right: 100px;
+    }
+
+    @include mq($q390) {
+      right: 70px;
+    }
+
+    @include mq($q2) {
+      right: 95px;
+    }
+
+    .rtl-class & {
+      @include mq($q428) {
+        right: 25px;
+      }
+
+      @include mq($q4) {
+        right: 40px;
+      }
+
+      @include mq($q390) {
+        right: 10px;
+      }
+
+      @include mq($q3) {
+        right: 40px;
+      }
+
+      @include mq($q1) {
+        right: 100px;
+      }
+    }
+  }
+
+  .slick-dots li {
+    margin: 0;
+  }
+
+  .slick-dots li button::before {
+    position: absolute;
+    content: '\2022';
+    text-align: center;
+    font-size: 0.5rem;
+    opacity: 1;
+    color: $primary-25;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  .slick-dots li.slick-active button::before {
+    color: #f95901 !important;
+    opacity: 1 !important;
+  }
+
+  .slick-vertical .slick-slide:hover {
+    opacity: 0.6 !important;
+    cursor: pointer !important;
+  }
+}

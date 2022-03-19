@@ -1,0 +1,117 @@
+@import "../../../assets/mixins";
+@import "../../../assets/variables";
+
+.Heart {
+  right: 24px;
+  background-color: white;
+  border-radius: 30px;
+  position: absolute;
+  padding: 0.5rem;
+  bottom: -22px;
+  width: 48px;
+  height: 48px;
+
+  &::after {
+    content: '';
+    width: 48px;
+    height: 27px;
+    border-top-left-radius: 110px;
+    border-top-right-radius: 110px;
+    border: 1px solid #F2F4F5;
+    border-bottom: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  :global .__react_component_tooltip {
+    margin-left: 0 !important;
+    white-space: normal;
+    width: 192px;
+  }
+
+  .slider-tooltip {
+    display: none;
+  }
+
+  .tooltip-element-custom {
+    background: #01222E;
+    border-radius: 8px;
+
+    p {
+      font-size: 16px !important;
+      line-height: 24px !important;
+      color: #FFF !important;
+    }
+  }
+
+  &:hover {
+    img {
+      opacity: 0.7;
+    }
+
+    cursor: pointer;
+
+    .slider-tooltip {
+      display: block;
+      background: #01222E;
+      border-radius: 8px;
+      padding: 0.5rem 1rem;
+      color: white !important;
+      font-weight: normal;
+      position: absolute;
+      right: 55px;
+      z-index: 1;
+      min-width: 200px;
+      height: fit-content;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      width: 272px;
+      transition: opacity 0.3s ease-out;
+      opacity: 0.9;
+
+      @media (max-width: ($grid-breakpoint-sm)) {
+        width: 100%;
+      }
+
+      .rtl-class & {
+        right: unset;
+        left: 100%;
+        margin-left: 10px;
+        width: auto;
+      }
+
+      p {
+        text-transform: initial;
+        color: white !important;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 16px;
+        border-left: 9px solid #01222E;
+        border-bottom: 8px solid transparent;
+        border-top: 8px solid transparent;
+        top: 0;
+        bottom: 0;
+        right: -8px;
+        margin: auto;
+
+        .rtl-class & {
+          right: unset;
+          left: -8px;
+          border-right: 9px solid #01222E;
+          border-left: unset;
+        }
+      }
+    }
+  }
+
+  .rtl-class & {
+    right: unset;
+    left: 24px;
+  }
+}
